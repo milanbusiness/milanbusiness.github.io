@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="392" height="92" viewBox="0 0 392 92" role="img" aria-labelledby="title desc">
+  <title id="title">MilanBusiness</title>
+  <desc id="desc">Green MilanBusiness monogram and bilingual wordmark</desc>
+  <defs>
+    <linearGradient id="g" x1="6" x2="78" y1="6" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#006a3b"/>
+      <stop offset="1" stop-color="#01381f"/>
+    </linearGradient>
+  </defs>
+  <rect width="392" height="92" rx="0" fill="none"/>
+  <g fill="url(#g)">
+    <path d="M8 82V10h18l28 29 28-29h18v72H82V36L54 65 26 36v46H8Z"/>
+    <path d="M34 82V45l20 20 20-20v37H58V68l-4 4-4-4v14H34Z" opacity=".92"/>
+    <path d="M31 10h17l6 7 6-7h17L54 33 31 10Z" opacity=".85"/>
+  </g>
+  <g fill="#033d24">
+    <text x="118" y="39" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="800">MilanBusiness</text>
+    <text x="118" y="68" font-family="Noto Sans SC, Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="800">米兰商务</text>
+  </g>
+  <path d="M288 62h74" stroke="#0a6238" stroke-width="4"/>
+</svg>
