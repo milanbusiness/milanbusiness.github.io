@@ -30,6 +30,10 @@ const translations = {
       kicker: "意大利歌单",
       title: "展会路上的 Milan mood"
     },
+    shorts: {
+      kicker: "Shorts",
+      title: "米兰展会短视频"
+    },
     hero: {
       eyebrow: "米兰及周边展会服务",
       title: "MilanBusiness",
@@ -138,6 +142,10 @@ const translations = {
       kicker: "Italian soundtrack",
       title: "Milan mood on the way to the fair"
     },
+    shorts: {
+      kicker: "Shorts",
+      title: "Milan fair videos"
+    },
     hero: {
       eyebrow: "Milan and nearby exhibition services",
       title: "MilanBusiness",
@@ -245,6 +253,10 @@ const translations = {
     music: {
       kicker: "Colonna sonora italiana",
       title: "Il mood di Milano verso la fiera"
+    },
+    shorts: {
+      kicker: "Shorts",
+      title: "Video fiere Milano"
     },
     hero: {
       eyebrow: "Servizi fieristici a Milano e dintorni",
@@ -956,6 +968,20 @@ function setupMusicPlayer() {
   });
 }
 
+function setupShortsPlaylist() {
+  const frame = document.querySelector("[data-shorts-frame]");
+  const buttons = document.querySelectorAll("[data-shorts-id]");
+  if (!frame || !buttons.length) return;
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const videoId = button.dataset.shortsId;
+      if (!videoId) return;
+      frame.src = `https://www.youtube.com/embed/${videoId}?rel=0&playsinline=1&autoplay=1`;
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.addEventListener("click", () => setLanguage(button.dataset.lang));
@@ -975,4 +1001,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setLanguage(currentLang);
   setupEventSlides();
   setupMusicPlayer();
+  setupShortsPlaylist();
 });
