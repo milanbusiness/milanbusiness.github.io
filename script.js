@@ -32,7 +32,7 @@ const translations = {
     },
     shorts: {
       kicker: "Shorts",
-      title: "米兰展会短视频"
+      title: "米兰音乐短视频"
     },
     hero: {
       eyebrow: "米兰及周边展会服务",
@@ -144,7 +144,7 @@ const translations = {
     },
     shorts: {
       kicker: "Shorts",
-      title: "Milan fair videos"
+      title: "Milan music shorts"
     },
     hero: {
       eyebrow: "Milan and nearby exhibition services",
@@ -256,7 +256,7 @@ const translations = {
     },
     shorts: {
       kicker: "Shorts",
-      title: "Video fiere Milano"
+      title: "Short musicali di Milano"
     },
     hero: {
       eyebrow: "Servizi fieristici a Milano e dintorni",
