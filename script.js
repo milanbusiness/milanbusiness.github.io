@@ -17,9 +17,19 @@ const imageUrls = {
   aiFood: "assets/cases/ai-food-fair.jpg"
 };
 
+const spotifyTracks = {
+  con: "7zrpoAJte9o12TzawqgdD0",
+  blu: "7xUTX3uQ2xS0uF56SEQ7Jk",
+  sara: "08sbpioHxwU7zyyMvmC8A9"
+};
+
 const translations = {
   zh: {
     nav: { services: "服务", cases: "样例", events: "近期展会", about: "Steven", quote: "询价" },
+    music: {
+      kicker: "意大利歌单",
+      title: "展会路上的 Milan mood"
+    },
     hero: {
       eyebrow: "米兰及周边展会服务",
       title: "MilanBusiness",
@@ -42,8 +52,11 @@ const translations = {
     },
     events: {
       eyebrow: "近期展会",
-      title: "2026 米兰展会服务窗口",
+      title: "2026年米兰主要展会",
       note: "展会日期请以主办方最新公布为准。",
+      routeFrom: "MXP 到当前展馆",
+      drive: "开车路线",
+      transit: "公交路线",
       status: { live: "进行中", upcoming: "即将开始", past: "已结束" }
     },
     about: {
@@ -105,6 +118,10 @@ const translations = {
       title: "免责声明和服务条款",
       lede: "以下条款用于询价和预订沟通阶段，正式服务以双方书面确认的报价、时间表、定金和付款条件为准。"
     },
+    media: {
+      eyebrow: "MilanBusiness Express",
+      title: "米兰是展会之城"
+    },
     footer: {
       copy: "米兰及周边展会商务陪同、三语翻译、交通需求协调和商务沟通支持。",
       contact: "联系"
@@ -117,6 +134,10 @@ const translations = {
   },
   en: {
     nav: { services: "Services", cases: "Examples", events: "Events", about: "Steven", quote: "Quote" },
+    music: {
+      kicker: "Italian soundtrack",
+      title: "Milan mood on the way to the fair"
+    },
     hero: {
       eyebrow: "Milan and nearby exhibition services",
       title: "MilanBusiness",
@@ -139,8 +160,11 @@ const translations = {
     },
     events: {
       eyebrow: "Upcoming fairs",
-      title: "2026 Milan trade fair service windows",
+      title: "Major Milan fairs in 2026",
       note: "Fair dates should be verified with the organizer's latest announcement.",
+      routeFrom: "MXP to current venue",
+      drive: "Driving route",
+      transit: "Public transit",
       status: { live: "Live", upcoming: "Upcoming", past: "Past" }
     },
     about: {
@@ -202,6 +226,10 @@ const translations = {
       title: "Disclaimer and service terms",
       lede: "These terms apply to inquiry and booking communication. Confirmed service follows the written quote, schedule, deposit and payment terms agreed by both parties."
     },
+    media: {
+      eyebrow: "MilanBusiness Express",
+      title: "Milan is the City of Exhibitions"
+    },
     footer: {
       copy: "Business accompaniment, trilingual interpretation, transport coordination and communication support for Milan and nearby exhibitions.",
       contact: "Contact"
@@ -214,6 +242,10 @@ const translations = {
   },
   it: {
     nav: { services: "Servizi", cases: "Esempi", events: "Fiere", about: "Steven", quote: "Preventivo" },
+    music: {
+      kicker: "Colonna sonora italiana",
+      title: "Il mood di Milano verso la fiera"
+    },
     hero: {
       eyebrow: "Servizi fieristici a Milano e dintorni",
       title: "MilanBusiness",
@@ -236,8 +268,11 @@ const translations = {
     },
     events: {
       eyebrow: "Fiere recenti",
-      title: "Finestre di servizio per Milano 2026",
+      title: "Principali fiere di Milano 2026",
       note: "Le date delle fiere vanno verificate con gli ultimi aggiornamenti degli organizzatori.",
+      routeFrom: "MXP alla sede corrente",
+      drive: "Percorso in auto",
+      transit: "Mezzi pubblici",
       status: { live: "In corso", upcoming: "In arrivo", past: "Conclusa" }
     },
     about: {
@@ -299,6 +334,10 @@ const translations = {
       title: "Disclaimer e condizioni di servizio",
       lede: "Queste condizioni valgono per richiesta e prenotazione. Il servizio confermato segue preventivo scritto, programma, deposito e pagamento concordati."
     },
+    media: {
+      eyebrow: "MilanBusiness Express",
+      title: "Milano è la città delle fiere"
+    },
     footer: {
       copy: "Accompagnamento business, interpretariato trilingue, coordinamento trasporti e comunicazione per fiere a Milano e dintorni.",
       contact: "Contatto"
@@ -356,99 +395,98 @@ const cases = {
   ]
 };
 
-const events = [
-  {
-    title: "TUTTOFOOD Milano 2026",
-    start: "2026-05-11",
-    end: "2026-05-14",
-    venue: "Fiera Milano Rho",
-    category: { zh: "食品与饮料", en: "Food & beverage", it: "Food & beverage" },
-    copy: {
-      zh: "食品、渠道、采购和品牌沟通场景，适合展位接待与采购陪同。",
-      en: "Food, channel, procurement and brand communication scenarios for booth and buyer support.",
-      it: "Scenari food, canale, acquisti e brand communication per stand e buyer support."
-    },
-    image: imageUrls.food
+const venueDetails = {
+  rho: {
+    label: "Fiera Milano Rho",
+    address: "Fiera Milano Rho, Strada Statale Sempione 28, 20017 Rho MI, Italy"
   },
-  {
-    title: "Transpotec Logitec",
-    start: "2026-05-13",
-    end: "2026-05-16",
-    venue: "Fiera Milano Rho",
-    category: { zh: "运输与物流", en: "Transport & logistics", it: "Trasporti e logistica" },
-    copy: {
-      zh: "车辆、供应链、智慧物流客户拜访与技术沟通支持。",
-      en: "Business visits and technical communication for vehicle, supply-chain and smart-logistics teams.",
-      it: "Visite business e comunicazione tecnica per veicoli, supply chain e smart logistics."
-    },
-    image: imageUrls.truck
-  },
-  {
-    title: "NME - Next Mobility Exhibition",
-    start: "2026-05-13",
-    end: "2026-05-16",
-    venue: "Fiera Milano Rho",
-    category: { zh: "公共交通与出行", en: "Public mobility", it: "Mobilità pubblica" },
-    copy: {
-      zh: "公共交通、可持续出行和智慧交通解决方案的商务沟通支持。",
-      en: "Business communication for public transport, sustainable mobility and smart transit solutions.",
-      it: "Comunicazione business per trasporto pubblico, mobilità sostenibile e soluzioni smart."
-    },
-    image: imageUrls.bus
-  },
-  {
-    title: "MAPIC Italy",
-    start: "2026-05-27",
-    end: "2026-05-28",
-    venue: "Fiera Milano Rho",
-    category: { zh: "零售地产与商业空间", en: "Retail real estate", it: "Retail real estate" },
-    copy: {
-      zh: "商业地产、品牌拓展、招商与渠道合作的会议陪同。",
-      en: "Meeting support for commercial real estate, brand expansion, leasing and partnerships.",
-      it: "Supporto riunioni per real estate commerciale, brand expansion, leasing e partnership."
-    },
-    image: imageUrls.meeting
-  },
-  {
-    title: "L'Artigiano in Fiera - Anteprima d'Estate",
-    start: "2026-05-29",
-    end: "2026-06-02",
-    venue: "Fiera Milano Rho",
-    category: { zh: "手工艺与消费展", en: "Crafts & consumer", it: "Artigianato e consumer" },
-    copy: {
-      zh: "手工艺、消费品和文化产品展位交流、采购沟通与路线安排。",
-      en: "Booth communication, procurement dialogue and route planning for crafts and consumer products.",
-      it: "Comunicazione stand, dialogo acquisti e percorsi per artigianato e prodotti consumer."
-    },
-    image: imageUrls.expo
-  },
-  {
-    title: "PLAST Milano 2026",
-    start: "2026-06-09",
-    end: "2026-06-12",
-    venue: "Fiera Milano Rho",
-    category: { zh: "塑料与橡胶工业", en: "Plastics & rubber", it: "Plastica e gomma" },
-    copy: {
-      zh: "机械设备、材料、模具和工业客户沟通支持。",
-      en: "Communication support for machinery, materials, moulds and industrial buyers.",
-      it: "Supporto comunicazione per macchinari, materiali, stampi e buyer industriali."
-    },
-    image: imageUrls.fastener
-  },
-  {
-    title: "Fastener Fair Italy 2026",
-    start: "2026-06-24",
-    end: "2026-06-25",
-    venue: "CityLife - Allianz MiCo",
-    category: { zh: "紧固件与工业零部件", en: "Fasteners & fixing", it: "Viteria e fissaggio" },
-    copy: {
-      zh: "紧固件、固定技术、工业零部件采购与会议陪同。",
-      en: "Procurement and meeting support for fasteners, fixing technology and industrial components.",
-      it: "Supporto acquisti e riunioni per viteria, fissaggio e componenti industriali."
-    },
-    image: imageUrls.fastener
+  mico: {
+    label: "CityLife - Allianz MiCo",
+    address: "Allianz MiCo, Piazzale Carlo Magno 1, 20149 Milano MI, Italy"
   }
-];
+};
+
+const events = [
+  ["Milano Unica", "2026-01-20", "2026-01-22", "rho", "Textiles and accessories", imageUrls.expo],
+  ["Promotiontrade Exhibition", "2026-01-21", "2026-01-23", "rho", "Promotional products", imageUrls.meeting],
+  ["Milano Home", "2026-01-22", "2026-01-25", "rho", "Home and lifestyle", imageUrls.expo],
+  ["MIDO", "2026-01-31", "2026-02-02", "rho", "Eyewear", imageUrls.expo],
+  ["BIT - Borsa Internazionale del Turismo", "2026-02-10", "2026-02-12", "rho", "Travel and tourism", imageUrls.milanStreet],
+  ["TheOneMilano", "2026-02-21", "2026-02-23", "rho", "Fashion", imageUrls.expo],
+  ["MICAM Milano", "2026-02-22", "2026-02-24", "rho", "Footwear", imageUrls.expo],
+  ["MIPEL", "2026-02-22", "2026-02-24", "rho", "Leather goods", imageUrls.expo],
+  ["Milano Fashion & Jewels", "2026-02-22", "2026-02-25", "rho", "Fashion accessories", imageUrls.expo],
+  ["FILO 65", "2026-02-25", "2026-02-26", "rho", "Yarns and fibres", imageUrls.expo],
+  ["MCE - Mostra Convegno Expocomfort", "2026-03-24", "2026-03-27", "rho", "HVAC and energy", imageUrls.expo],
+  ["Sì Sposaitalia Collezioni", "2026-04-17", "2026-04-19", "rho", "Bridal fashion", imageUrls.expo],
+  ["Miart", "2026-04-17", "2026-04-19", "mico", "Modern and contemporary art", imageUrls.milanStreet],
+  ["Salone del Mobile.Milano", "2026-04-21", "2026-04-26", "rho", "Design and furniture", imageUrls.expo],
+  ["TUTTOFOOD Milano", "2026-05-11", "2026-05-14", "rho", "Food and beverage", imageUrls.food],
+  ["Transpotec Logitec", "2026-05-13", "2026-05-16", "rho", "Transport and logistics", imageUrls.truck],
+  ["NME - Next Mobility Exhibition", "2026-05-13", "2026-05-16", "rho", "Mobility", imageUrls.bus],
+  ["MAPIC Italy", "2026-05-27", "2026-05-28", "rho", "Retail real estate", imageUrls.meeting],
+  ["L'Artigiano in Fiera - Anteprima d'Estate", "2026-05-29", "2026-06-02", "rho", "Crafts and consumer", imageUrls.expo],
+  ["PLAST Milano", "2026-06-09", "2026-06-12", "rho", "Plastics and rubber", imageUrls.fastener],
+  ["Fastener Fair Italy", "2026-06-24", "2026-06-25", "mico", "Fasteners and fixing", imageUrls.fastener],
+  ["Milano Unica", "2026-07-07", "2026-07-09", "rho", "Textiles and accessories", imageUrls.expo],
+  ["MICAM Milano", "2026-09-13", "2026-09-15", "rho", "Footwear", imageUrls.expo],
+  ["MIPEL", "2026-09-13", "2026-09-15", "rho", "Leather goods", imageUrls.expo],
+  ["Gastech Exhibition & Conference", "2026-09-15", "2026-09-18", "rho", "Energy", imageUrls.expo],
+  ["Milano Fashion & Jewels", "2026-09-19", "2026-09-22", "rho", "Fashion accessories", imageUrls.expo],
+  ["Lineapelle", "2026-09-22", "2026-09-24", "rho", "Leather and materials", imageUrls.expo],
+  ["Simac Tanning Tech", "2026-09-22", "2026-09-24", "rho", "Footwear and leather machinery", imageUrls.expo],
+  ["FILO 66", "2026-09-23", "2026-09-24", "rho", "Yarns and fibres", imageUrls.expo],
+  ["Salone Franchising Milano", "2026-09-24", "2026-09-26", "rho", "Franchising", imageUrls.meeting],
+  ["BI-MU", "2026-10-07", "2026-10-10", "rho", "Machine tools", imageUrls.fastener],
+  ["EXPOdetergo International", "2026-10-23", "2026-10-26", "rho", "Laundry and textile care", imageUrls.expo],
+  ["EICMA", "2026-11-03", "2026-11-08", "rho", "Motorcycles", imageUrls.expo],
+  ["Enovitis Business", "2026-11-17", "2026-11-20", "rho", "Wine and vineyard technology", imageUrls.expo],
+  ["Enlit Europe", "2026-12-01", "2026-12-03", "rho", "Energy transition", imageUrls.expo],
+  ["L'Artigiano in Fiera", "2026-12-05", "2026-12-13", "rho", "Crafts and consumer", imageUrls.expo]
+].map(([title, start, end, venueKey, category, image]) => ({
+  title,
+  start,
+  end,
+  venueKey,
+  venue: venueDetails[venueKey].label,
+  address: venueDetails[venueKey].address,
+  category,
+  image
+}));
+
+const eventDetailsZh = {
+  "Promotiontrade Exhibition": ["促销礼品与企业定制", "面向促销品、企业礼赠、品牌物料和营销采购的专业展会，适合寻找意大利及欧洲供应商、洽谈定制品和渠道合作。"],
+  "Milano Home": ["家居生活与室内用品", "聚焦家居用品、餐桌陈设、装饰礼品和生活方式产品，适合零售、进口、设计选品和品牌代理沟通。"],
+  "Milano Unica": ["纺织面料与辅料", "意大利高端纺织面料、辅料和时尚供应链展会，适合服装品牌、采购团队和供应商进行样品、价格和合作细节沟通。"],
+  "MIDO": ["眼镜与光学", "全球重要眼镜行业展，覆盖镜架、镜片、设备、品牌和零售渠道，适合新品选品、渠道拜访和商务洽谈。"],
+  "BIT - Borsa Internazionale del Turismo": ["旅游与目的地推广", "意大利重要旅游业展会，覆盖目的地、旅行社、酒店、交通和文旅服务，适合商务拜访和跨境旅游资源对接。"],
+  "TheOneMilano": ["高端服装与成衣", "面向时装、外套、皮草、成衣和精品渠道的专业展会，适合品牌展示、买手沟通和代理合作。"],
+  "MICAM Milano": ["鞋履", "国际鞋履行业核心展会，覆盖男女鞋、童鞋、设计品牌和供应链，适合采购、品牌代理和渠道洽谈。"],
+  "MIPEL": ["箱包与皮具", "专注箱包、皮具、配饰和旅行用品，适合寻找意大利设计产品、生产供应商和欧洲渠道伙伴。"],
+  "Milano Fashion & Jewels": ["时尚配饰与珠宝", "展示时尚配饰、饰品、珠宝和创意设计产品，适合买手、零售商和品牌拓展团队参观洽谈。"],
+  "FILO 65": ["纱线与纤维", "面向纱线、纤维和纺织上游材料的专业展会，适合材料采购、技术交流和供应链沟通。"],
+  "MCE - Mostra Convegno Expocomfort": ["暖通、能源与建筑系统", "覆盖暖通空调、制冷、能源效率、水处理和建筑设备，是工程、安装、贸易和制造企业的重要交流平台。"],
+  "Sì Sposaitalia Collezioni": ["婚纱与礼服", "意大利婚纱、礼服和婚庆时尚展会，适合买手、品牌代理和高端礼服供应链洽谈。"],
+  "Miart": ["现代与当代艺术", "米兰现代和当代艺术博览会，覆盖画廊、收藏、艺术机构和创意产业，适合艺术商务拜访与沟通。"],
+  "Salone del Mobile.Milano": ["家具与设计", "全球设计和家具行业标志性展会，覆盖家具、灯具、办公、厨卫和设计品牌，适合商务拜访和项目合作。"],
+  "TUTTOFOOD Milano": ["食品与饮料", "国际食品饮料展会，覆盖进口食品、零售、餐饮、渠道和品牌合作，适合采购、样品介绍和供应商洽谈。"],
+  "Transpotec Logitec": ["运输与物流", "聚焦车辆、运输、物流、供应链和智能车队管理，适合技术沟通、商务拜访和解决方案介绍。"],
+  "NME - Next Mobility Exhibition": ["公共交通与智慧出行", "面向公共交通、可持续出行和智能交通系统，适合交通技术、运营服务和城市出行方案交流。"],
+  "MAPIC Italy": ["零售地产与商业空间", "聚焦购物中心、商业地产、品牌拓展和招商合作，适合地产、零售品牌和商业空间服务团队会谈。"],
+  "L'Artigiano in Fiera - Anteprima d'Estate": ["手工艺与消费品", "展示手工艺、文化产品、食品和消费品，适合采购、品牌沟通和多展位路线安排。"],
+  "PLAST Milano": ["塑料与橡胶工业", "覆盖塑料橡胶机械、材料、模具、自动化和工业供应链，适合技术翻译、设备沟通和采购会谈。"],
+  "Fastener Fair Italy": ["紧固件与固定技术", "面向紧固件、固定技术、工业零部件和供应链采购，适合工程、制造和贸易团队进行专业洽谈。"],
+  "Gastech Exhibition & Conference": ["能源与天然气", "国际能源、天然气、LNG、氢能和低碳技术展会，适合能源企业、设备商和服务商商务沟通。"],
+  "Lineapelle": ["皮革、材料与辅料", "国际皮革、材料、配件和时尚供应链展会，适合鞋包、服装和制造企业采购沟通。"],
+  "Simac Tanning Tech": ["鞋革机械与制革技术", "聚焦鞋类、皮革制品和制革加工设备，适合机械、工艺、技术参数和供应商洽谈。"],
+  "Salone Franchising Milano": ["特许经营与连锁商业", "面向加盟、连锁品牌、零售服务和商业模式拓展，适合投资、品牌代理和渠道合作会谈。"],
+  "BI-MU": ["机床与制造技术", "意大利重要机床、自动化和先进制造展会，适合机械设备、工业客户和技术方案沟通。"],
+  "EXPOdetergo International": ["洗涤、干洗与纺织护理", "覆盖洗衣、干洗、纺织护理、设备和清洁服务，适合设备采购和专业技术交流。"],
+  "EICMA": ["摩托车与两轮出行", "国际摩托车、自行车、零部件和出行产品展会，适合品牌、渠道、配件和技术商务沟通。"],
+  "Enovitis Business": ["葡萄酒与葡萄园技术", "聚焦葡萄种植、葡萄酒生产设备和农业技术，适合酒庄、设备商和农业供应链交流。"],
+  "Enlit Europe": ["能源转型与电力", "覆盖电力系统、数字能源、能源转型和智能电网，适合能源技术企业和方案服务商会谈。"],
+  "L'Artigiano in Fiera": ["手工艺、食品与文化消费", "米兰大型手工艺和文化消费展，覆盖多国展商、特色食品、礼品和文化产品，适合采购和路线协调。"]
+};
 
 const formOptions = {
   zh: {
@@ -550,8 +588,8 @@ const icons = {
 };
 
 let currentLang = localStorage.getItem("milanbusiness-lang") || "zh";
-let carouselTimer = null;
-let carouselPaused = false;
+let eventTimer = null;
+let activeEventIndex = 0;
 
 function getPath(obj, path) {
   return path.split(".").reduce((value, key) => value && value[key], obj);
@@ -637,29 +675,102 @@ function getStatus(event) {
 }
 
 function renderEvents() {
-  const carousel = document.querySelector("[data-event-carousel]");
-  carousel.innerHTML = events.map((event) => {
-    const status = getStatus(event);
-    const serviceTags = currentLang === "zh"
-      ? ["商务陪同", "口译", "交通", "后续"]
-      : currentLang === "it"
-        ? ["Accompagnamento", "Interpretariato", "Trasporti", "Follow-up"]
-        : ["Accompaniment", "Interpretation", "Transport", "Follow-up"];
-    return `
-      <article class="event-card is-${status}" style="--event-image: url('${event.image}')">
-        <div class="event-content">
-          <span class="event-status">${translations[currentLang].events.status[status]}</span>
-          <h3>${event.title}</h3>
-          <span class="event-date">${formatDateRange(event)}</span>
-          <p>${event.venue} | ${event.category[currentLang]}</p>
-        </div>
-        <div class="event-footer">
-          <p>${event.copy[currentLang]}</p>
-          <div class="event-services">${serviceTags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-        </div>
-      </article>
-    `;
-  }).join("");
+  renderEventPair(activeEventIndex);
+  const index = document.querySelector("[data-event-index]");
+  if (index) {
+    index.innerHTML = events.map((event, itemIndex) => `
+      <span class="${itemIndex === activeEventIndex ? "is-active" : ""}">${event.title}</span>
+    `).join("");
+  }
+}
+
+function renderEventCard(event, positionLabel) {
+  return `
+    <article class="event-card" style="--event-image: url('${event.image}')">
+      <div class="event-content">
+        <span class="event-position">${positionLabel}</span>
+        <h3>${event.title}</h3>
+        <span class="event-date">${formatDateRange(event)}</span>
+        <p>${event.venue}</p>
+      </div>
+    </article>
+  `;
+}
+
+function getEventDetailZh(event) {
+  const specific = eventDetailsZh[event.title];
+  if (specific) return { category: specific[0], intro: specific[1] };
+  return {
+    category: event.category,
+    intro: `${event.title} 是 2026 年米兰主要展会之一，适合根据参展目标安排展馆拜访、商务沟通、资料准备和交通衔接。`
+  };
+}
+
+function renderEventDetail(event) {
+  const detail = document.querySelector("[data-event-detail]");
+  if (!detail) return;
+  const zh = getEventDetailZh(event);
+  detail.innerHTML = `
+    <span class="detail-kicker">展会详细信息</span>
+    <h3>${event.title}</h3>
+    <dl>
+      <div>
+        <dt>时间</dt>
+        <dd>${formatDateRange(event)}</dd>
+      </div>
+      <div>
+        <dt>地点</dt>
+        <dd>${event.venue}</dd>
+      </div>
+      <div>
+        <dt>地址</dt>
+        <dd>${event.address}</dd>
+      </div>
+      <div>
+        <dt>方向</dt>
+        <dd>${zh.category}</dd>
+      </div>
+    </dl>
+    <p>${zh.intro}</p>
+  `;
+}
+
+function buildMapsUrl(address, mode = "") {
+  const origin = "Milan Malpensa Airport, 21010 Ferno VA, Italy";
+  const base = "https://www.google.com/maps/dir/?api=1";
+  const params = new URLSearchParams({
+    origin,
+    destination: address
+  });
+  if (mode) params.set("travelmode", mode);
+  return `${base}&${params.toString()}`;
+}
+
+function buildEmbeddedDirectionsUrl(address) {
+  const origin = encodeURIComponent("Milan Malpensa Airport, 21010 Ferno VA, Italy");
+  const destination = encodeURIComponent(address);
+  return `https://www.google.com/maps?output=embed&saddr=${origin}&daddr=${destination}`;
+}
+
+function renderEventPair(index) {
+  const primary = events[index % events.length];
+  const primaryContainer = document.querySelector("[data-event-primary]");
+  if (!primaryContainer) return;
+  primaryContainer.innerHTML = renderEventCard(primary, `${String(index + 1).padStart(2, "0")} / ${events.length}`);
+
+  const mapFrame = document.querySelector("[data-map-frame]");
+  const driving = document.querySelector("[data-route-driving]");
+  const transit = document.querySelector("[data-route-transit]");
+  if (mapFrame) {
+    mapFrame.src = buildEmbeddedDirectionsUrl(primary.address);
+  }
+  if (driving) driving.href = buildMapsUrl(primary.address, "driving");
+  if (transit) transit.href = buildMapsUrl(primary.address, "transit");
+  renderEventDetail(primary);
+
+  document.querySelectorAll("[data-event-index] span").forEach((item, itemIndex) => {
+    item.classList.toggle("is-active", itemIndex === index);
+  });
 }
 
 function renderAgreement() {
@@ -682,9 +793,21 @@ function renderSelect(name, options) {
   }
 }
 
+function buildExhibitionOptions() {
+  const emptyLabel = currentLang === "zh" ? "请选择" : currentLang === "it" ? "Seleziona" : "Select";
+  const otherLabel = currentLang === "zh" ? "其他展会 / 项目" : currentLang === "it" ? "Altra fiera / progetto" : "Other fair / project";
+  return [
+    ["", emptyLabel],
+    ...events.map((event) => [event.title, `${event.title} | ${formatDateRange(event)} | ${event.venue}`]),
+    ["__other", otherLabel]
+  ];
+}
+
 function renderFormOptions() {
   const options = formOptions[currentLang];
-  Object.keys(options).forEach((name) => renderSelect(name, options[name]));
+  Object.keys(options).forEach((name) => {
+    renderSelect(name, name === "exhibition" ? buildExhibitionOptions() : options[name]);
+  });
 
   const serviceContainer = document.querySelector("[data-service-options]");
   const checked = new Set([...serviceContainer.querySelectorAll("input:checked")].map((input) => input.value));
@@ -811,40 +934,26 @@ function handleSubmit(event) {
   window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 }
 
-function setupCarousel() {
-  const carousel = document.querySelector("[data-event-carousel]");
-  const prev = document.querySelector("[data-carousel-prev]");
-  const next = document.querySelector("[data-carousel-next]");
-  const toggle = document.querySelector("[data-carousel-toggle]");
+function setupEventSlides() {
+  clearInterval(eventTimer);
+  eventTimer = setInterval(() => {
+    activeEventIndex = (activeEventIndex + 1) % events.length;
+    renderEventPair(activeEventIndex);
+  }, 5000);
+}
 
-  const scrollByCard = (direction = 1) => {
-    const card = carousel.querySelector(".event-card");
-    if (!card) return;
-    const distance = card.getBoundingClientRect().width + 16;
-    const maxScroll = carousel.scrollWidth - carousel.clientWidth - 4;
-    if (direction > 0 && carousel.scrollLeft >= maxScroll) {
-      carousel.scrollTo({ left: 0, behavior: "smooth" });
-    } else {
-      carousel.scrollBy({ left: distance * direction, behavior: "smooth" });
-    }
-  };
-
-  prev.addEventListener("click", () => scrollByCard(-1));
-  next.addEventListener("click", () => scrollByCard(1));
-  toggle.addEventListener("click", () => {
-    carouselPaused = !carouselPaused;
-    toggle.classList.toggle("is-paused", carouselPaused);
-    if (carouselPaused) {
-      clearInterval(carouselTimer);
-    } else {
-      carouselTimer = setInterval(() => scrollByCard(1), 4200);
-    }
+function setupMusicPlayer() {
+  const frame = document.querySelector("[data-spotify-frame]");
+  const buttons = document.querySelectorAll("[data-spotify-track]");
+  if (!frame || !buttons.length) return;
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const trackId = spotifyTracks[button.dataset.spotifyTrack];
+      if (!trackId) return;
+      frame.src = `https://open.spotify.com/embed/track/${trackId}?utm_source=generator&theme=0&autoplay=1`;
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+    });
   });
-  carousel.addEventListener("mouseenter", () => clearInterval(carouselTimer));
-  carousel.addEventListener("mouseleave", () => {
-    if (!carouselPaused) carouselTimer = setInterval(() => scrollByCard(1), 4200);
-  });
-  carouselTimer = setInterval(() => scrollByCard(1), 4200);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -864,5 +973,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   form.addEventListener("submit", handleSubmit);
   setLanguage(currentLang);
-  setupCarousel();
+  setupEventSlides();
+  setupMusicPlayer();
 });

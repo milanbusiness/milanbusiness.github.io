@@ -28,7 +28,35 @@
       </div>
     </header>
 
-    <main id="top">
+    <section id="top" class="music-strip" aria-label="Italian soundtrack">
+      <div class="music-shell">
+        <div class="music-copy">
+          <span data-i18n="music.kicker">意大利歌单</span>
+          <strong data-i18n="music.title">展会路上的 Milan mood</strong>
+        </div>
+        <div class="music-actions" role="group" aria-label="Spotify tracks">
+          <button type="button" class="music-button is-active" data-spotify-track="con">
+            <span>Con te partirò</span>
+          </button>
+          <button type="button" class="music-button" data-spotify-track="blu">
+            <span>Nel blu dipinto di blu</span>
+          </button>
+          <button type="button" class="music-button" data-spotify-track="sara">
+            <span>Sarà perché ti amo</span>
+          </button>
+        </div>
+        <iframe
+          class="spotify-player"
+          data-spotify-frame
+          title="Spotify player"
+          src="https://open.spotify.com/embed/track/7zrpoAJte9o12TzawqgdD0?utm_source=generator&theme=0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <main>
       <section class="hero section-band" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
           <img src="https://images.pexels.com/photos/35138560/pexels-photo-35138560.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="">
@@ -90,26 +118,27 @@
 
       <section id="events" class="section-band events">
         <div class="container">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow" data-i18n="events.eyebrow">近期展会</p>
-              <h2 data-i18n="events.title">2026 米兰展会服务窗口</h2>
-            </div>
-            <div class="carousel-controls">
-              <button type="button" class="icon-button" data-carousel-prev aria-label="Previous event">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"></path></svg>
-              </button>
-              <button type="button" class="icon-button" data-carousel-toggle aria-label="Pause carousel">
-                <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 7v10M14 7v10"></path></svg>
-                <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5z"></path></svg>
-              </button>
-              <button type="button" class="icon-button" data-carousel-next aria-label="Next event">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
-              </button>
-            </div>
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="events.eyebrow">近期展会</p>
+            <h2 data-i18n="events.title">2026年米兰主要展会</h2>
           </div>
-          <div class="event-carousel" data-event-carousel tabindex="0" aria-label="Milan exhibition carousel"></div>
-          <p class="source-note" data-i18n="events.note">展会日期请以主办方最新公布为准。</p>
+          <div class="event-showcase" aria-label="Milan 2026 exhibition slides">
+            <div class="event-column" data-event-primary></div>
+            <div class="event-map-panel">
+              <div class="map-frame">
+                <iframe data-map-frame title="Milan exhibition map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="route-tools">
+                <span data-i18n="events.routeFrom">MXP 到当前展馆</span>
+                <div>
+                  <a data-route-driving target="_blank" rel="noopener" data-i18n="events.drive">开车路线</a>
+                  <a data-route-transit target="_blank" rel="noopener" data-i18n="events.transit">公交路线</a>
+                </div>
+              </div>
+            </div>
+            <aside class="event-detail-panel" data-event-detail aria-label="展会详细信息"></aside>
+          </div>
+          <div class="event-index" data-event-index></div>
         </div>
       </section>
 
@@ -306,6 +335,35 @@
             <p data-i18n="agreement.lede">以下条款用于询价和预订沟通阶段，正式服务以双方书面确认的报价、时间表、定金和付款条件为准。</p>
           </div>
           <div class="agreement-grid" data-agreement-grid></div>
+        </div>
+      </section>
+
+      <section id="media" class="section-band media-section" aria-labelledby="media-title">
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow" data-i18n="media.eyebrow">MilanBusiness Express</p>
+              <h2 id="media-title" data-i18n="media.title">米兰是展会之城</h2>
+            </div>
+            <div class="social-actions" aria-label="MilanBusiness Express channels">
+              <a href="https://www.tiktok.com/@milanbusinessexpress" target="_blank" rel="noopener">TikTok</a>
+              <a href="https://www.youtube.com/@milanbusinessexpress/" target="_blank" rel="noopener">YouTube</a>
+            </div>
+          </div>
+          <div class="video-grid">
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/sn0M7vuMYvc?rel=0" title="MilanBusiness video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <a href="https://youtu.be/sn0M7vuMYvc" target="_blank" rel="noopener">YouTube</a>
+            </div>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/d4aN-yKpUjM?rel=0" title="MilanBusiness video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <a href="https://www.youtube.com/watch?v=d4aN-yKpUjM" target="_blank" rel="noopener">YouTube</a>
+            </div>
+            <div class="video-embed">
+              <iframe src="https://www.youtube.com/embed/vmGr9YxPgk0?rel=0" title="MilanBusiness video 3" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <a href="https://www.youtube.com/watch?v=vmGr9YxPgk0" target="_blank" rel="noopener">YouTube</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
