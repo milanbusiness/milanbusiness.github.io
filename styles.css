@@ -94,6 +94,8 @@ textarea {
 .language-switch {
   display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-self: end;
+  width: max-content;
   gap: 2px;
   padding: 3px;
   border: 1px solid var(--line);
@@ -1395,5 +1397,188 @@ textarea:focus {
   .about-list div {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+}
+
+.chrome-toggle,
+.shorts-toggle {
+  display: none;
+  border: 1px solid rgba(216, 228, 222, .95);
+  color: #fff;
+  background: rgba(3, 32, 21, .94);
+  box-shadow: 0 14px 38px rgba(3, 32, 21, .22);
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+}
+
+.chrome-toggle {
+  position: fixed;
+  top: 10px;
+  left: 12px;
+  z-index: 42;
+  min-width: 48px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.shorts-toggle {
+  min-width: 52px;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.site-header,
+.site-header .brand img,
+.site-header .nav,
+.site-header .language-switch,
+.music-strip,
+.music-shell,
+.music-copy,
+.music-actions,
+.spotify-player,
+.shorts-dock,
+.shorts-panel {
+  transition:
+    transform .26s ease,
+    opacity .26s ease,
+    width .26s ease,
+    max-height .26s ease,
+    padding .26s ease,
+    min-height .26s ease;
+}
+
+@media (min-width: 981px) {
+  body.chrome-collapsed:not(.chrome-awake) .chrome-toggle,
+  body.shorts-collapsed:not(.shorts-awake) .shorts-toggle {
+    display: inline-flex;
+  }
+
+  body.chrome-collapsed:not(.chrome-awake) .site-header {
+    gap: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  body.chrome-collapsed:not(.chrome-awake) .site-header .brand img {
+    width: 126px;
+    height: auto;
+  }
+
+  body.chrome-collapsed:not(.chrome-awake) .site-header .nav {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(-6px);
+  }
+
+  body.chrome-collapsed:not(.chrome-awake) .site-header .language-switch {
+    transform: scale(.9);
+    transform-origin: right center;
+  }
+
+  body.chrome-collapsed:not(.chrome-awake) .music-strip {
+    transform: translateY(-86px);
+    opacity: .96;
+  }
+
+  body.chrome-collapsed:not(.chrome-awake) .music-shell {
+    min-height: 28px;
+    max-height: 28px;
+    overflow: hidden;
+    padding: 3px 0;
+  }
+
+  body.chrome-collapsed:not(.chrome-awake) .music-copy,
+  body.chrome-collapsed:not(.chrome-awake) .music-actions,
+  body.chrome-collapsed:not(.chrome-awake) .spotify-player {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  body.shorts-collapsed .shorts-dock {
+    width: 58px;
+  }
+
+  body.shorts-collapsed .shorts-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  body.shorts-collapsed:not(.shorts-awake) .shorts-panel {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(112%);
+  }
+}
+
+@media (max-width: 980px) {
+  .chrome-toggle {
+    display: inline-flex;
+  }
+
+  body.mobile-chrome-collapsed:not(.chrome-awake) .site-header {
+    height: 0;
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom-width: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  body.mobile-chrome-collapsed:not(.chrome-awake) .site-header > * {
+    visibility: hidden;
+  }
+
+  body.mobile-chrome-collapsed:not(.chrome-awake) .music-strip {
+    display: none;
+  }
+
+  body.mobile-chrome-collapsed:not(.chrome-awake) .chrome-toggle {
+    display: inline-flex;
+  }
+
+  body.chrome-awake .chrome-toggle {
+    opacity: .62;
+  }
+
+  .shorts-dock {
+    position: fixed;
+    top: auto;
+    right: 12px;
+    bottom: 16px;
+    z-index: 40;
+    width: min(360px, calc(100% - 24px));
+    margin: 0;
+  }
+
+  .shorts-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  body.shorts-collapsed:not(.shorts-awake) .shorts-dock {
+    width: auto;
+  }
+
+  body.shorts-collapsed:not(.shorts-awake) .shorts-panel {
+    display: none;
+  }
+
+  body.shorts-awake .shorts-toggle {
+    margin-bottom: 8px;
   }
 }

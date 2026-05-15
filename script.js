@@ -985,6 +985,80 @@ function setupShortsPlaylist() {
   });
 }
 
+function setupAutoCollapse() {
+  const desktopQuery = window.matchMedia("(min-width: 981px)");
+  const chromeToggle = document.querySelector("[data-chrome-toggle]");
+  const shortsToggle = document.querySelector("[data-shorts-toggle]");
+  let chromeTimer;
+  let shortsTimer;
+
+  const wakeChrome = (persist = false) => {
+    document.body.classList.add("chrome-awake");
+    clearTimeout(chromeTimer);
+    if (!persist) {
+      chromeTimer = setTimeout(() => document.body.classList.remove("chrome-awake"), 2600);
+    }
+  };
+
+  const wakeShorts = (persist = false) => {
+    document.body.classList.add("shorts-awake");
+    clearTimeout(shortsTimer);
+    if (!persist) {
+      shortsTimer = setTimeout(() => document.body.classList.remove("shorts-awake"), 3200);
+    }
+  };
+
+  const sync = () => {
+    const isDesktop = desktopQuery.matches;
+    document.body.classList.toggle("mobile-chrome-collapsed", !isDesktop);
+    if (isDesktop) {
+      const shouldCollapse = window.scrollY > 150;
+      document.body.classList.toggle("chrome-collapsed", shouldCollapse);
+      document.body.classList.toggle("shorts-collapsed", shouldCollapse);
+      if (!shouldCollapse) {
+        document.body.classList.remove("chrome-awake", "shorts-awake");
+      }
+    } else {
+      document.body.classList.add("chrome-collapsed", "shorts-collapsed");
+    }
+  };
+
+  chromeToggle?.addEventListener("click", () => {
+    document.body.classList.toggle("chrome-awake");
+    clearTimeout(chromeTimer);
+  });
+
+  shortsToggle?.addEventListener("click", () => {
+    document.body.classList.toggle("shorts-awake");
+    clearTimeout(shortsTimer);
+  });
+
+  document.addEventListener("mousemove", (event) => {
+    if (event.clientY < 34 && document.body.classList.contains("chrome-collapsed")) {
+      wakeChrome();
+    }
+    if (window.innerWidth - event.clientX < 42 && document.body.classList.contains("shorts-collapsed")) {
+      wakeShorts();
+    }
+  });
+
+  document.addEventListener("touchstart", (event) => {
+    const point = event.touches[0];
+    if (!point) return;
+    if (point.clientY < 52 && document.body.classList.contains("chrome-collapsed")) {
+      wakeChrome();
+    }
+    if (window.innerWidth - point.clientX < 58 && document.body.classList.contains("shorts-collapsed")) {
+      wakeShorts();
+    }
+  }, { passive: true });
+
+  window.addEventListener("scroll", sync, { passive: true });
+  window.addEventListener("resize", sync);
+  desktopQuery.addEventListener?.("change", sync);
+  sync();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.addEventListener("click", () => setLanguage(button.dataset.lang));
@@ -1005,4 +1079,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupEventSlides();
   setupMusicPlayer();
   setupShortsPlaylist();
+  setupAutoCollapse();
 });
