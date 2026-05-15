@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "wjbear2020@gmail.com";
+const CONTACT_EMAIL = "wjbear2020@Gmail.com";
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
 
 const imageUrls = {
@@ -128,7 +128,8 @@ const translations = {
     },
     footer: {
       copy: "米兰及周边展会商务陪同、三语翻译、交通需求协调和商务沟通支持。",
-      contact: "联系"
+      contact: "联系",
+      channels: "内容频道"
     },
     mail: {
       subject: "MilanBusiness 询价申请",
@@ -240,7 +241,8 @@ const translations = {
     },
     footer: {
       copy: "Business accompaniment, trilingual interpretation, transport coordination and communication support for Milan and nearby exhibitions.",
-      contact: "Contact"
+      contact: "Contact",
+      channels: "Channels"
     },
     mail: {
       subject: "MilanBusiness quote request",
@@ -352,7 +354,8 @@ const translations = {
     },
     footer: {
       copy: "Accompagnamento business, interpretariato trilingue, coordinamento trasporti e comunicazione per fiere a Milano e dintorni.",
-      contact: "Contatto"
+      contact: "Contatto",
+      channels: "Canali"
     },
     mail: {
       subject: "Richiesta preventivo MilanBusiness",
