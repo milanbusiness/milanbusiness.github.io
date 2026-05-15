@@ -11,9 +11,9 @@ const imageUrls = {
   truck: "https://images.pexels.com/photos/11781701/pexels-photo-11781701.jpeg?auto=compress&cs=tinysrgb&w=1400",
   milanStreet: "https://images.pexels.com/photos/36379511/pexels-photo-36379511.jpeg?auto=compress&cs=tinysrgb&w=1400",
   fiera: "https://upload.wikimedia.org/wikipedia/commons/7/73/Fieramilano_Rho_Pero_improved_version.jpg",
-  aiBooth: "assets/cases/ai-booth-interpretation.jpg",
-  aiMeeting: "assets/cases/ai-business-meeting.jpg",
-  aiTransport: "assets/cases/ai-transport-coordination.jpg",
+  aiBooth: "assets/cases/ai-booth-interpretation_wm.jpg",
+  aiMeeting: "assets/cases/ai-business-meeting_wm.jpg",
+  aiTransport: "assets/cases/ai-transport-coordination_wm.jpg",
   aiFood: "assets/cases/ai-food-fair.jpg"
 };
 
