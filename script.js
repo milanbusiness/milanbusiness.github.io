@@ -23,9 +23,24 @@ const spotifyTracks = {
   sara: "08sbpioHxwU7zyyMvmC8A9"
 };
 
+const documentMeta = {
+  zh: {
+    title: "MilanBusiness | 米兰展会翻译、商务支持与中国意大利贸易",
+    description: "MilanBusiness 提供米兰 Fiera Milano Rho、Allianz MiCo、Fieramilanocity 等展会的中英意翻译、商务陪同、商务咨询、中国意大利贸易、出口进口、销售增长和市场拓展支持。"
+  },
+  en: {
+    title: "MilanBusiness | Milan Fiera Translation & China-Italy Business Support",
+    description: "MilanBusiness provides Chinese-English-Italian interpretation, translation, business support and consultancy for Fiera Milano Rho, Allianz MiCo, China-Italy trade, export-import, sales growth and marketing growth in Milan."
+  },
+  it: {
+    title: "MilanBusiness | Traduzione Fiera Milano e Supporto Business Cina-Italia",
+    description: "MilanBusiness offre interpretariato e traduzione cinese-inglese-italiano, accompagnamento business, consulenza, commercio Cina-Italia, export-import, crescita vendite e marketing per Fiera Milano Rho, Allianz MiCo e Milano."
+  }
+};
+
 const translations = {
   zh: {
-    nav: { services: "服务", cases: "样例", events: "近期展会", about: "Steven", quote: "询价" },
+    nav: { services: "服务", coverage: "覆盖", cases: "样例", events: "近期展会", about: "Steven", quote: "询价" },
     music: {
       kicker: "意大利歌单",
       title: "展会路上的 Milan mood"
@@ -37,17 +52,26 @@ const translations = {
     hero: {
       eyebrow: "米兰及周边展会服务",
       title: "MilanBusiness",
-      lede: "展会商务陪同、三语口译、交通需求协调、资料翻译与现场辅助服务，面向中国及国际企业在米兰的参展、拜访和商务沟通。",
+      lede: "展会商务陪同、三语口译、交通需求协调、资料翻译、商务咨询与现场辅助服务，面向中国及国际企业在米兰的参展、拜访、出口进口和贸易沟通。",
       cta: "确定细节并询价",
       email: "邮件联系",
       signal1: { kicker: "语言", value: "中文 / English / Italiano" },
-      signal2: { kicker: "覆盖", value: "Fiera Milano Rho / CityLife / 米兰市内及周边区域" },
-      signal3: { kicker: "支持", value: "展位接待、会议沟通、后续工作及其他辅助服务" }
+      signal2: { kicker: "覆盖", value: "Fiera Milano Rho / Allianz MiCo / Fieramilanocity / 米兰及周边" },
+      signal3: { kicker: "支持", value: "翻译、商务支持、出口进口、销售增长和市场拓展" }
     },
     services: {
       eyebrow: "服务范围",
-      title: "展会现场、商务沟通与后续执行支持",
-      lede: "面向中国及国际企业负责人、业务团队和短期来访代表，按展会节奏组合翻译、陪同、交通协调、资料处理和后续沟通。"
+      title: "展会现场、商务沟通、贸易咨询与后续增长支持",
+      lede: "面向中国及国际企业负责人、业务团队和短期来访代表，按展会节奏组合翻译、陪同、交通协调、资料处理、中国-意大利贸易、出口进口、销售增长和市场拓展支持。"
+    },
+    coverage: {
+      eyebrow: "服务覆盖",
+      title: "米兰展馆、展会名称与贸易支持",
+      lede: "面向到米兰参展、观展、商务拜访和渠道开发的团队，服务覆盖主要 fiera 场馆、周边会议地点，以及中国-意大利贸易、出口进口、销售增长和市场拓展场景。",
+      venuesTitle: "米兰及周边 fiera 场馆",
+      supportTitle: "商务支持与增长服务",
+      fairsTitle: "页面覆盖的展会名称",
+      fairsIntro: "这些展会名称来自页面的活动指南和询价模块，方便客户按具体展会沟通翻译、陪同、交通和后续业务支持。"
     },
     cases: {
       eyebrow: "往期合作样例",
@@ -127,7 +151,7 @@ const translations = {
       title: "米兰是展会之城"
     },
     footer: {
-      copy: "米兰及周边展会商务陪同、三语翻译、交通需求协调和商务沟通支持。",
+      copy: "米兰及周边展会商务陪同、三语翻译、交通需求协调、商务咨询、中国意大利贸易、出口进口和销售市场增长支持。",
       contact: "联系",
       channels: "内容频道"
     },
@@ -138,7 +162,7 @@ const translations = {
     }
   },
   en: {
-    nav: { services: "Services", cases: "Examples", events: "Events", about: "Steven", quote: "Quote" },
+    nav: { services: "Services", coverage: "Coverage", cases: "Examples", events: "Events", about: "Steven", quote: "Quote" },
     music: {
       kicker: "Italian soundtrack",
       title: "Milan mood on the way to the fair"
@@ -150,17 +174,26 @@ const translations = {
     hero: {
       eyebrow: "Milan and nearby exhibition services",
       title: "MilanBusiness",
-      lede: "Business accompaniment, trilingual interpretation, transport coordination, material translation and on-site support for Chinese and international companies in Milan.",
+      lede: "Business accompaniment, trilingual interpretation, transport coordination, material translation, business consultancy and on-site support for Chinese and international companies working on Milan fairs, export-import and trade communication.",
       cta: "Define details",
       email: "Email Steven",
       signal1: { kicker: "Languages", value: "Chinese / English / Italian" },
-      signal2: { kicker: "Coverage", value: "Fiera Milano Rho / CityLife / Milan and nearby areas" },
-      signal3: { kicker: "Support", value: "Booth reception, meetings, follow-up and auxiliary services" }
+      signal2: { kicker: "Coverage", value: "Fiera Milano Rho / Allianz MiCo / Fieramilanocity / Milan and nearby areas" },
+      signal3: { kicker: "Support", value: "Translation, business support, export-import, sales growth and marketing growth" }
     },
     services: {
       eyebrow: "Service scope",
-      title: "On-site fair, business communication and follow-up support",
-      lede: "For Chinese and international executives, business teams and short-stay delegations, the service combines interpretation, accompaniment, transport coordination, material handling and follow-up."
+      title: "On-site fair, business communication, trade consultancy and growth support",
+      lede: "For Chinese and international executives, business teams and short-stay delegations, the service combines interpretation, accompaniment, transport coordination, material handling, China-Italy trade, export-import, sales growth and marketing growth support."
+    },
+    coverage: {
+      eyebrow: "Service coverage",
+      title: "Milan fiera venues, fair names and trade support",
+      lede: "For teams visiting Milan for exhibitions, business meetings, channel development and trade missions, support covers major fiera venues, nearby conference locations, China-Italy trade, Italy-world trade, export-import, sales growth and marketing growth.",
+      venuesTitle: "Milan and nearby fiera venues",
+      supportTitle: "Business support and growth services",
+      fairsTitle: "Fair names covered on this page",
+      fairsIntro: "These fair names come from the event guide and quote module, so clients can request translation, accompaniment, transport and follow-up support by specific Milan fair."
     },
     cases: {
       eyebrow: "Collaboration examples",
@@ -240,7 +273,7 @@ const translations = {
       title: "Milan is the City of Exhibitions"
     },
     footer: {
-      copy: "Business accompaniment, trilingual interpretation, transport coordination and communication support for Milan and nearby exhibitions.",
+      copy: "Business accompaniment, trilingual translation, transport coordination, business consultancy, China-Italy trade, export-import, sales growth and marketing growth support for Milan and nearby exhibitions.",
       contact: "Contact",
       channels: "Channels"
     },
@@ -251,7 +284,7 @@ const translations = {
     }
   },
   it: {
-    nav: { services: "Servizi", cases: "Esempi", events: "Fiere", about: "Steven", quote: "Preventivo" },
+    nav: { services: "Servizi", coverage: "Copertura", cases: "Esempi", events: "Fiere", about: "Steven", quote: "Preventivo" },
     music: {
       kicker: "Colonna sonora italiana",
       title: "Il mood di Milano verso la fiera"
@@ -263,17 +296,26 @@ const translations = {
     hero: {
       eyebrow: "Servizi fieristici a Milano e dintorni",
       title: "MilanBusiness",
-      lede: "Accompagnamento business, interpretariato trilingue, coordinamento trasporti, traduzione materiali e supporto sul posto per aziende cinesi e internazionali a Milano.",
+      lede: "Accompagnamento business, interpretariato trilingue, coordinamento trasporti, traduzione materiali, consulenza business e supporto sul posto per aziende cinesi e internazionali a Milano, export-import e comunicazione commerciale.",
       cta: "Definisci dettagli",
       email: "Scrivi a Steven",
       signal1: { kicker: "Lingue", value: "Cinese / Inglese / Italiano" },
-      signal2: { kicker: "Copertura", value: "Fiera Milano Rho / CityLife / Milano e dintorni" },
-      signal3: { kicker: "Supporto", value: "Accoglienza stand, riunioni, follow-up e servizi ausiliari" }
+      signal2: { kicker: "Copertura", value: "Fiera Milano Rho / Allianz MiCo / Fieramilanocity / Milano e dintorni" },
+      signal3: { kicker: "Supporto", value: "Traduzione, supporto business, export-import, crescita vendite e marketing" }
     },
     services: {
       eyebrow: "Ambito dei servizi",
-      title: "Supporto fieristico, comunicazione business e follow-up",
-      lede: "Per aziende cinesi e internazionali, manager, team commerciali e delegazioni brevi: interpretariato, accompagnamento, trasporti, materiali e follow-up."
+      title: "Supporto fieristico, comunicazione business, consulenza trade e crescita",
+      lede: "Per aziende cinesi e internazionali, manager, team commerciali e delegazioni brevi: interpretariato, accompagnamento, trasporti, materiali, commercio Cina-Italia, export-import, crescita vendite e sviluppo marketing."
+    },
+    coverage: {
+      eyebrow: "Copertura servizi",
+      title: "Sedi fiera a Milano, nomi delle fiere e supporto trade",
+      lede: "Per team in arrivo a Milano per fiere, incontri business, sviluppo canali e missioni commerciali: copertura delle principali sedi fiera, location congressuali vicine, commercio Cina-Italia, Italia-mondo, export-import, crescita vendite e marketing.",
+      venuesTitle: "Sedi fiera a Milano e dintorni",
+      supportTitle: "Supporto business e crescita",
+      fairsTitle: "Nomi delle fiere coperti nella pagina",
+      fairsIntro: "Questi nomi provengono dalla guida eventi e dal modulo preventivo, così il cliente può richiedere traduzione, accompagnamento, trasporti e follow-up per una fiera specifica."
     },
     cases: {
       eyebrow: "Esempi di collaborazione",
@@ -353,7 +395,7 @@ const translations = {
       title: "Milano è la città delle fiere"
     },
     footer: {
-      copy: "Accompagnamento business, interpretariato trilingue, coordinamento trasporti e comunicazione per fiere a Milano e dintorni.",
+      copy: "Accompagnamento business, traduzione trilingue, coordinamento trasporti, consulenza business, commercio Cina-Italia, export-import, crescita vendite e marketing per fiere a Milano e dintorni.",
       contact: "Contatto",
       channels: "Canali"
     },
@@ -367,29 +409,80 @@ const translations = {
 
 const services = {
   zh: [
-    ["展会商务陪同", "展馆报到、展位沟通、客户迎送、拜访提醒、现场问题处理。", "users"],
-    ["中英意口译支持", "适合展位接待、商务会谈、电话沟通、客户拜访和临时沟通。", "messages"],
-    ["交通需求协调", "衔接机场、酒店、展馆、餐厅、客户拜访点及米兰周边行程。", "car"],
-    ["会议与谈判支持", "会前梳理议题和材料，会中辅助表达，会后整理纪要与待办。", "briefcase"],
-    ["资料翻译与后续工作", "中英意邮件、介绍材料、产品资料、客户信息表和会后沟通文本。", "file"],
+    ["展会商务陪同", "Fiera Milano Rho、Allianz MiCo、Fieramilanocity 等场景的报到、展位沟通、客户迎送、拜访提醒和现场问题处理。", "users"],
+    ["中英意翻译与口译", "中文、英文、意大利语现场口译、电话沟通、产品资料翻译、邮件翻译和会后文本整理。", "messages"],
+    ["交通需求协调", "衔接机场、酒店、展馆、餐厅、客户拜访点及米兰周边城市行程。", "car"],
+    ["商务咨询与会议支持", "为中国-意大利贸易、Italy-world trade、商务拜访和谈判准备议题、材料、纪要和待办。", "briefcase"],
+    ["出口进口与渠道对接", "围绕 export import、采购、代理、分销商、供应商和行业协会沟通，辅助寻找下一步合作路径。", "settings"],
+    ["销售增长与市场拓展", "支持 sales growth、marketing growth、线索筛选、客户分层、展后跟进和本地市场反馈。", "users"],
+    ["资料翻译与后续工作", "中英意邮件、介绍材料、产品资料、客户信息表、报价沟通和会后 follow-up 文本。", "file"],
     ["其他辅助服务", "根据展会行业、团队人数、语言组合和日程安排补充定制服务。", "settings"]
   ],
   en: [
-    ["Business accompaniment", "Registration, booth communication, visitor reception, schedule reminders and on-site issue handling.", "users"],
-    ["Chinese-English-Italian interpretation", "For booth reception, business meetings, calls, client visits and ad-hoc communication.", "messages"],
-    ["Transport coordination", "Airport, hotel, fairground, restaurants, client visits and nearby Milan routes.", "car"],
-    ["Meeting and negotiation support", "Prepare agendas and materials, assist communication, summarize minutes and action items.", "briefcase"],
-    ["Translation and follow-up work", "Trilingual emails, intro materials, product documents, client sheets and follow-up messages.", "file"],
+    ["Business accompaniment", "Registration, booth communication, visitor reception, schedule reminders and on-site issue handling at Fiera Milano Rho, Allianz MiCo, Fieramilanocity and nearby venues.", "users"],
+    ["Chinese-English-Italian translation", "On-site interpretation, calls, product-material translation, email translation and post-meeting text in Chinese, English and Italian.", "messages"],
+    ["Transport coordination", "Airport, hotel, fairground, restaurants, client visits and nearby Milan-area routes.", "car"],
+    ["Business consultancy and meeting support", "Prepare agendas, materials, minutes and action items for China-Italy trade, Italy-world trade, business visits and negotiations.", "briefcase"],
+    ["Export-import and channel support", "Support export import, sourcing, agents, distributors, suppliers and trade-association conversations toward the next commercial step.", "settings"],
+    ["Sales growth and marketing growth", "Support lead qualification, customer segmentation, fair follow-up and local market feedback for sales growth and marketing growth.", "users"],
+    ["Translation and follow-up work", "Trilingual emails, intro materials, product documents, client sheets, quote communication and follow-up messages.", "file"],
     ["Auxiliary services", "Additional support tailored to industry, team size, language mix and schedule.", "settings"]
   ],
   it: [
-    ["Accompagnamento business", "Registrazione, comunicazione allo stand, accoglienza clienti, promemoria agenda e gestione imprevisti.", "users"],
-    ["Interpretariato cinese-inglese-italiano", "Per stand, riunioni, chiamate, visite clienti e comunicazione sul posto.", "messages"],
-    ["Coordinamento trasporti", "Aeroporto, hotel, fiera, ristoranti, visite clienti e itinerari nei dintorni di Milano.", "car"],
-    ["Supporto riunioni e negoziazione", "Preparazione agenda e materiali, supporto alla comunicazione, verbali e follow-up.", "briefcase"],
-    ["Traduzione materiali e follow-up", "Email trilingui, materiali prodotto, schede clienti, sintesi riunioni e messaggi successivi.", "file"],
+    ["Accompagnamento business", "Registrazione, comunicazione allo stand, accoglienza clienti, promemoria agenda e gestione imprevisti a Fiera Milano Rho, Allianz MiCo, Fieramilanocity e sedi vicine.", "users"],
+    ["Traduzione e interpretariato cinese-inglese-italiano", "Interpretariato sul posto, chiamate, traduzione materiali prodotto, email e testi post-riunione in cinese, inglese e italiano.", "messages"],
+    ["Coordinamento trasporti", "Aeroporto, hotel, fiera, ristoranti, visite clienti e itinerari nell'area di Milano.", "car"],
+    ["Consulenza business e supporto riunioni", "Preparazione agenda, materiali, verbali e azioni per commercio Cina-Italia, Italia-mondo, visite business e negoziazioni.", "briefcase"],
+    ["Export-import e sviluppo canali", "Supporto a export import, sourcing, agenti, distributori, fornitori e associazioni di categoria verso il passo commerciale successivo.", "settings"],
+    ["Crescita vendite e marketing", "Supporto a lead qualification, segmentazione clienti, follow-up fiera e feedback di mercato locale per crescita vendite e marketing.", "users"],
+    ["Traduzione materiali e follow-up", "Email trilingui, materiali prodotto, schede clienti, comunicazione preventivi, sintesi riunioni e messaggi successivi.", "file"],
     ["Servizi ausiliari", "Supporto aggiuntivo su misura per settore, persone, lingue e programma.", "settings"]
   ]
+};
+
+const coverageLists = {
+  zh: {
+    venues: [
+      "Milan", "Milano", "Rho Fiera", "Fiera Milano Rho", "Allianz MiCo", "MiCo Milano Convention Centre",
+      "Fieramilanocity", "CityLife Milano", "Superstudio Più", "BASE Milano", "Fabbrica del Vapore",
+      "Palazzo delle Stelline", "Talent Garden Calabiana", "NH Milano Congress Centre", "MalpensaFiere",
+      "Fiera di Bergamo", "Lariofiere Erba", "Monza", "Como", "Brescia"
+    ],
+    support: [
+      "translation", "business support", "business consultancy", "China Italy trade", "Italy world trade",
+      "export import", "sales growth", "marketing growth", "中英意翻译", "米兰商务陪同",
+      "中国意大利贸易", "出口进口", "渠道开发", "代理商沟通", "分销商沟通", "供应商沟通",
+      "采购团队", "制造企业", "贸易公司", "品牌出海", "展后跟进"
+    ]
+  },
+  en: {
+    venues: [
+      "Milan", "Milano", "Rho Fiera", "Fiera Milano Rho", "Allianz MiCo", "MiCo Milano Convention Centre",
+      "Fieramilanocity", "CityLife Milano", "Superstudio Più", "BASE Milano", "Fabbrica del Vapore",
+      "Palazzo delle Stelline", "Talent Garden Calabiana", "NH Milano Congress Centre", "MalpensaFiere",
+      "Fiera di Bergamo", "Lariofiere Erba", "Monza", "Como", "Brescia"
+    ],
+    support: [
+      "translation", "interpretation", "business support", "business consultancy", "China Italy trade",
+      "Italy world trade", "export import", "sales growth", "marketing growth", "trade fair support",
+      "booth reception", "client visits", "agent search", "distributor conversations", "supplier meetings",
+      "procurement teams", "manufacturers", "trading companies", "brand expansion", "post-fair follow-up"
+    ]
+  },
+  it: {
+    venues: [
+      "Milan", "Milano", "Rho Fiera", "Fiera Milano Rho", "Allianz MiCo", "MiCo Milano Convention Centre",
+      "Fieramilanocity", "CityLife Milano", "Superstudio Più", "BASE Milano", "Fabbrica del Vapore",
+      "Palazzo delle Stelline", "Talent Garden Calabiana", "NH Milano Congress Centre", "MalpensaFiere",
+      "Fiera di Bergamo", "Lariofiere Erba", "Monza", "Como", "Brescia"
+    ],
+    support: [
+      "traduzione", "interpretariato", "supporto business", "consulenza business", "commercio Cina Italia",
+      "commercio Italia mondo", "export import", "crescita vendite", "crescita marketing", "supporto fiera",
+      "accoglienza stand", "visite clienti", "ricerca agenti", "distributori", "fornitori",
+      "team acquisti", "aziende manifatturiere", "società trading", "espansione brand", "follow-up fiera"
+    ]
+  }
 };
 
 const cases = {
@@ -561,9 +654,9 @@ const formOptions = {
 };
 
 const serviceOptions = {
-  zh: [["accompaniment", "展会商务陪同"], ["interpretation", "中英意口译"], ["transport", "交通需求协调"], ["meeting", "商务会议支持"], ["followup", "会议/展会后续工作"], ["other", "其他服务"]],
-  en: [["accompaniment", "Business accompaniment"], ["interpretation", "Trilingual interpretation"], ["transport", "Transport coordination"], ["meeting", "Meeting support"], ["followup", "Meeting/fair follow-up"], ["other", "Other services"]],
-  it: [["accompaniment", "Accompagnamento business"], ["interpretation", "Interpretariato trilingue"], ["transport", "Coordinamento trasporti"], ["meeting", "Supporto riunioni"], ["followup", "Follow-up riunione/fiera"], ["other", "Altri servizi"]]
+  zh: [["accompaniment", "展会商务陪同"], ["interpretation", "中英意翻译/口译"], ["transport", "交通需求协调"], ["meeting", "商务会议支持"], ["consultancy", "商务咨询 / 中国意大利贸易"], ["exportImport", "出口进口与渠道对接"], ["salesMarketing", "销售增长 / 市场拓展"], ["followup", "会议/展会后续工作"], ["other", "其他服务"]],
+  en: [["accompaniment", "Business accompaniment"], ["interpretation", "Trilingual translation/interpretation"], ["transport", "Transport coordination"], ["meeting", "Meeting support"], ["consultancy", "Business consultancy / China-Italy trade"], ["exportImport", "Export-import and channel support"], ["salesMarketing", "Sales growth / marketing growth"], ["followup", "Meeting/fair follow-up"], ["other", "Other services"]],
+  it: [["accompaniment", "Accompagnamento business"], ["interpretation", "Traduzione/interpretariato trilingue"], ["transport", "Coordinamento trasporti"], ["meeting", "Supporto riunioni"], ["consultancy", "Consulenza business / commercio Cina-Italia"], ["exportImport", "Export-import e sviluppo canali"], ["salesMarketing", "Crescita vendite / marketing"], ["followup", "Follow-up riunione/fiera"], ["other", "Altri servizi"]]
 };
 
 const agreementItems = {
@@ -610,9 +703,16 @@ function getPath(obj, path) {
   return path.split(".").reduce((value, key) => value && value[key], obj);
 }
 
+function updateDocumentMetadata(lang) {
+  const meta = documentMeta[lang] || documentMeta.en;
+  document.title = meta.title;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description);
+}
+
 function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem("milanbusiness-lang", lang);
+  updateDocumentMetadata(lang);
   document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);
@@ -626,6 +726,7 @@ function setLanguage(lang) {
     if (value) node.setAttribute("placeholder", value);
   });
   renderServices();
+  renderCoverage();
   renderCases();
   renderEvents();
   renderAgreement();
@@ -644,6 +745,19 @@ function renderServices() {
       <p>${copy}</p>
     </article>
   `).join("");
+}
+
+function renderTagList(selector, items) {
+  const container = document.querySelector(selector);
+  if (!container) return;
+  container.innerHTML = [...new Set(items)].map((item) => `<span>${item}</span>`).join("");
+}
+
+function renderCoverage() {
+  const coverage = coverageLists[currentLang] || coverageLists.en;
+  renderTagList("[data-coverage-venues]", coverage.venues);
+  renderTagList("[data-coverage-support]", coverage.support);
+  renderTagList("[data-coverage-fairs]", events.map((event) => event.title));
 }
 
 function renderCases() {
