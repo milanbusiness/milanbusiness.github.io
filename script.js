@@ -4,7 +4,6 @@ const MS_PER_DAY = 24 * 60 * 60 * 1000;
 const imageUrls = {
   expo: "https://images.pexels.com/photos/35138560/pexels-photo-35138560.jpeg?auto=compress&cs=tinysrgb&w=1400",
   meeting: "https://images.pexels.com/photos/7693683/pexels-photo-7693683.jpeg?auto=compress&cs=tinysrgb&w=1400",
-  car: "https://images.pexels.com/photos/36377051/pexels-photo-36377051.jpeg?auto=compress&cs=tinysrgb&w=1200",
   food: "https://images.pexels.com/photos/15254104/pexels-photo-15254104.jpeg?auto=compress&cs=tinysrgb&w=1400",
   fastener: "https://images.pexels.com/photos/21050460/pexels-photo-21050460.jpeg?auto=compress&cs=tinysrgb&w=1400",
   bus: "https://images.pexels.com/photos/27174513/pexels-photo-27174513.jpeg?auto=compress&cs=tinysrgb&w=1400",
@@ -13,7 +12,6 @@ const imageUrls = {
   fiera: "https://upload.wikimedia.org/wikipedia/commons/7/73/Fieramilano_Rho_Pero_improved_version.jpg",
   aiBooth: "assets/cases/ai-booth-interpretation_wm.jpg",
   aiMeeting: "assets/cases/ai-business-meeting_wm.jpg",
-  aiTransport: "assets/cases/ai-transport-coordination_wm.jpg",
   aiFood: "assets/cases/ai-food-fair.jpg"
 };
 
@@ -52,7 +50,7 @@ const translations = {
     hero: {
       eyebrow: "米兰及周边展会服务",
       title: "MilanBusiness",
-      lede: "展会商务陪同、三语口译、交通需求协调、资料翻译、商务咨询与现场辅助服务，面向中国及国际企业在米兰的参展、拜访、出口进口和贸易沟通。",
+      lede: "展会商务陪同、三语口译、资料翻译、商务咨询与现场辅助服务，面向中国及国际企业在米兰的参展、拜访、出口进口和贸易沟通。",
       cta: "确定细节并询价",
       email: "邮件联系",
       signal1: { kicker: "语言", value: "中文 / English / Italiano" },
@@ -62,7 +60,7 @@ const translations = {
     services: {
       eyebrow: "服务范围",
       title: "展会现场、商务沟通、贸易咨询与后续增长支持",
-      lede: "面向中国及国际企业负责人、业务团队和短期来访代表，按展会节奏组合翻译、陪同、交通协调、资料处理、中国-意大利贸易、出口进口、销售增长和市场拓展支持。"
+      lede: "面向中国及国际企业负责人、业务团队和短期来访代表，按展会节奏组合翻译、陪同、资料处理、中国-意大利贸易、出口进口、销售增长和市场拓展支持。"
     },
     coverage: {
       eyebrow: "服务覆盖",
@@ -71,11 +69,11 @@ const translations = {
       venuesTitle: "米兰及周边 fiera 场馆",
       supportTitle: "商务支持与增长服务",
       fairsTitle: "页面覆盖的展会名称",
-      fairsIntro: "这些展会名称来自页面的活动指南和询价模块，方便客户按具体展会沟通翻译、陪同、交通和后续业务支持。"
+      fairsIntro: "这些展会名称来自页面的活动指南和询价模块，方便客户按具体展会沟通翻译、陪同、资料和后续业务支持。"
     },
     cases: {
       eyebrow: "往期合作样例",
-      title: "展会陪同、翻译、交通",
+      title: "展会陪同、翻译与商务沟通",
       lede: ""
     },
     events: {
@@ -102,7 +100,7 @@ const translations = {
     quote: {
       eyebrow: "询价模块",
       title: "确定细节后，自动生成邮件询价申请",
-      lede: "填写展会、日期、参展方人数、资料量、语言、交通和后续工作需求后，系统会整理成邮件正文，便于确认档期和报价。",
+      lede: "填写展会、日期、参展方人数、资料量、语言和后续工作需求后，系统会整理成邮件正文，便于确认档期和报价。",
       summaryLabel: "需求概览",
       summaryText: "建议至少提前 3 周沟通并预付定金锁定档期。",
       levels: ["标准", "强化", "复杂", "高强度"],
@@ -122,12 +120,8 @@ const translations = {
       projectNote: "备注",
       projectNotePlaceholder: "建议至少提前 3 周沟通并预付定金锁定档期，可补充行业、展位、客户名单、会议目标等。",
       languagePair: "语言组合",
-      transfer: "用车 / 接送",
-      otherTransfer: "其他用车需求",
-      carPeople: "用车人数",
-      luggage: "用车行李数",
-      itineraryNote: "行程备注",
-      itineraryPlaceholder: "请增加其他细节，如多日多点行程、其他商务行程、机场航班、酒店、展馆入口等。",
+      itineraryNote: "展会执行备注",
+      itineraryPlaceholder: "请增加其他细节，如展位号、会议时间、客户名单、资料链接、展馆入口信息等。",
       deliverables: "会议 / 展会后续工作",
       otherService: "其他服务说明",
       name: "姓名",
@@ -151,7 +145,7 @@ const translations = {
       title: "米兰是展会之城"
     },
     footer: {
-      copy: "米兰及周边展会商务陪同、三语翻译、交通需求协调、商务咨询、中国意大利贸易、出口进口和销售市场增长支持。",
+      copy: "米兰及周边展会商务陪同、三语翻译、商务咨询、中国意大利贸易、出口进口和销售市场增长支持。",
       contact: "联系",
       channels: "内容频道"
     },
@@ -174,7 +168,7 @@ const translations = {
     hero: {
       eyebrow: "Milan and nearby exhibition services",
       title: "MilanBusiness",
-      lede: "Business accompaniment, trilingual interpretation, transport coordination, material translation, business consultancy and on-site support for Chinese and international companies working on Milan fairs, export-import and trade communication.",
+      lede: "Business accompaniment, trilingual interpretation, material translation, business consultancy and on-site support for Chinese and international companies working on Milan fairs, export-import and trade communication.",
       cta: "Define details",
       email: "Email Steven",
       signal1: { kicker: "Languages", value: "Chinese / English / Italian" },
@@ -184,7 +178,7 @@ const translations = {
     services: {
       eyebrow: "Service scope",
       title: "On-site fair, business communication, trade consultancy and growth support",
-      lede: "For Chinese and international executives, business teams and short-stay delegations, the service combines interpretation, accompaniment, transport coordination, material handling, China-Italy trade, export-import, sales growth and marketing growth support."
+      lede: "For Chinese and international executives, business teams and short-stay delegations, the service combines interpretation, accompaniment, material handling, China-Italy trade, export-import, sales growth and marketing growth support."
     },
     coverage: {
       eyebrow: "Service coverage",
@@ -193,11 +187,11 @@ const translations = {
       venuesTitle: "Milan and nearby fiera venues",
       supportTitle: "Business support and growth services",
       fairsTitle: "Fair names covered on this page",
-      fairsIntro: "These fair names come from the event guide and quote module, so clients can request translation, accompaniment, transport and follow-up support by specific Milan fair."
+      fairsIntro: "These fair names come from the event guide and quote module, so clients can request translation, accompaniment, material and follow-up support by specific Milan fair."
     },
     cases: {
       eyebrow: "Collaboration examples",
-      title: "Fairs, translation and transport",
+      title: "Fairs, translation and business communication",
       lede: ""
     },
     events: {
@@ -224,7 +218,7 @@ const translations = {
     quote: {
       eyebrow: "Quote module",
       title: "Define the details and generate an email inquiry",
-      lede: "The form formats fair, dates, exhibitor-side team size, material volume, language, transport and follow-up needs into an email for availability and pricing review.",
+      lede: "The form formats fair, dates, exhibitor-side team size, material volume, language and follow-up needs into an email for availability and pricing review.",
       summaryLabel: "Request overview",
       summaryText: "A three-week lead time and deposit are recommended to reserve the schedule.",
       levels: ["Standard", "Enhanced", "Complex", "High intensity"],
@@ -244,12 +238,8 @@ const translations = {
       projectNote: "Notes",
       projectNotePlaceholder: "A three-week lead time and deposit are recommended. Add industry, booth, client list, meeting goals, etc.",
       languagePair: "Language pair",
-      transfer: "Transport / transfer",
-      otherTransfer: "Other transport needs",
-      carPeople: "Vehicle passengers",
-      luggage: "Luggage pieces",
-      itineraryNote: "Itinerary notes",
-      itineraryPlaceholder: "Add details such as multi-day routes, other business trips, flights, hotel, venue entrance, etc.",
+      itineraryNote: "Project notes",
+      itineraryPlaceholder: "Add details such as booth number, meeting times, client list, material links, venue entrance notes, etc.",
       deliverables: "Meeting / fair follow-up work",
       otherService: "Other service details",
       name: "Name",
@@ -273,7 +263,7 @@ const translations = {
       title: "Milan is the City of Exhibitions"
     },
     footer: {
-      copy: "Business accompaniment, trilingual translation, transport coordination, business consultancy, China-Italy trade, export-import, sales growth and marketing growth support for Milan and nearby exhibitions.",
+      copy: "Business accompaniment, trilingual translation, business consultancy, China-Italy trade, export-import, sales growth and marketing growth support for Milan and nearby exhibitions.",
       contact: "Contact",
       channels: "Channels"
     },
@@ -296,7 +286,7 @@ const translations = {
     hero: {
       eyebrow: "Servizi fieristici a Milano e dintorni",
       title: "MilanBusiness",
-      lede: "Accompagnamento business, interpretariato trilingue, coordinamento trasporti, traduzione materiali, consulenza business e supporto sul posto per aziende cinesi e internazionali a Milano, export-import e comunicazione commerciale.",
+      lede: "Accompagnamento business, interpretariato trilingue, traduzione materiali, consulenza business e supporto sul posto per aziende cinesi e internazionali a Milano, export-import e comunicazione commerciale.",
       cta: "Definisci dettagli",
       email: "Scrivi a Steven",
       signal1: { kicker: "Lingue", value: "Cinese / Inglese / Italiano" },
@@ -306,7 +296,7 @@ const translations = {
     services: {
       eyebrow: "Ambito dei servizi",
       title: "Supporto fieristico, comunicazione business, consulenza trade e crescita",
-      lede: "Per aziende cinesi e internazionali, manager, team commerciali e delegazioni brevi: interpretariato, accompagnamento, trasporti, materiali, commercio Cina-Italia, export-import, crescita vendite e sviluppo marketing."
+      lede: "Per aziende cinesi e internazionali, manager, team commerciali e delegazioni brevi: interpretariato, accompagnamento, materiali, commercio Cina-Italia, export-import, crescita vendite e sviluppo marketing."
     },
     coverage: {
       eyebrow: "Copertura servizi",
@@ -315,11 +305,11 @@ const translations = {
       venuesTitle: "Sedi fiera a Milano e dintorni",
       supportTitle: "Supporto business e crescita",
       fairsTitle: "Nomi delle fiere coperti nella pagina",
-      fairsIntro: "Questi nomi provengono dalla guida eventi e dal modulo preventivo, così il cliente può richiedere traduzione, accompagnamento, trasporti e follow-up per una fiera specifica."
+      fairsIntro: "Questi nomi provengono dalla guida eventi e dal modulo preventivo, così il cliente può richiedere traduzione, accompagnamento, materiali e follow-up per una fiera specifica."
     },
     cases: {
       eyebrow: "Esempi di collaborazione",
-      title: "Fiere, traduzione e trasporti",
+      title: "Fiere, traduzione e comunicazione business",
       lede: ""
     },
     events: {
@@ -346,7 +336,7 @@ const translations = {
     quote: {
       eyebrow: "Modulo preventivo",
       title: "Definisci i dettagli e genera una richiesta email",
-      lede: "Il modulo organizza fiera, date, persone lato espositore, volume materiali, lingue, trasporti e follow-up in una email per disponibilità e prezzo.",
+      lede: "Il modulo organizza fiera, date, persone lato espositore, volume materiali, lingue e follow-up in una email per disponibilità e prezzo.",
       summaryLabel: "Sintesi richiesta",
       summaryText: "Si consiglia di comunicare con almeno 3 settimane di anticipo e versare un deposito per bloccare le date.",
       levels: ["Standard", "Rafforzato", "Complesso", "Alta intensità"],
@@ -366,12 +356,8 @@ const translations = {
       projectNote: "Note",
       projectNotePlaceholder: "Si consigliano almeno 3 settimane e deposito. Aggiungi settore, stand, lista clienti, obiettivi riunione, ecc.",
       languagePair: "Combinazione lingue",
-      transfer: "Trasporto / transfer",
-      otherTransfer: "Altre esigenze trasporto",
-      carPeople: "Passeggeri",
-      luggage: "Bagagli",
-      itineraryNote: "Note itinerario",
-      itineraryPlaceholder: "Aggiungi dettagli: percorsi multi-giorno, altri impegni business, voli, hotel, ingresso fiera, ecc.",
+      itineraryNote: "Note operative",
+      itineraryPlaceholder: "Aggiungi dettagli: numero stand, orari riunioni, lista clienti, link materiali, ingresso fiera, ecc.",
       deliverables: "Follow-up riunione / fiera",
       otherService: "Dettagli altri servizi",
       name: "Nome",
@@ -395,7 +381,7 @@ const translations = {
       title: "Milano è la città delle fiere"
     },
     footer: {
-      copy: "Accompagnamento business, traduzione trilingue, coordinamento trasporti, consulenza business, commercio Cina-Italia, export-import, crescita vendite e marketing per fiere a Milano e dintorni.",
+      copy: "Accompagnamento business, traduzione trilingue, consulenza business, commercio Cina-Italia, export-import, crescita vendite e marketing per fiere a Milano e dintorni.",
       contact: "Contatto",
       channels: "Canali"
     },
@@ -411,7 +397,6 @@ const services = {
   zh: [
     ["展会商务陪同", "Fiera Milano Rho、Allianz MiCo、Fieramilanocity 等场景的报到、展位沟通、客户迎送、拜访提醒和现场问题处理。", "users"],
     ["中英意翻译与口译", "中文、英文、意大利语现场口译、电话沟通、产品资料翻译、邮件翻译和会后文本整理。", "messages"],
-    ["交通需求协调", "衔接机场、酒店、展馆、餐厅、客户拜访点及米兰周边城市行程。", "car"],
     ["商务咨询与会议支持", "为中国-意大利贸易、Italy-world trade、商务拜访和谈判准备议题、材料、纪要和待办。", "briefcase"],
     ["出口进口与渠道对接", "围绕 export import、采购、代理、分销商、供应商和行业协会沟通，辅助寻找下一步合作路径。", "settings"],
     ["销售增长与市场拓展", "支持 sales growth、marketing growth、线索筛选、客户分层、展后跟进和本地市场反馈。", "users"],
@@ -421,7 +406,6 @@ const services = {
   en: [
     ["Business accompaniment", "Registration, booth communication, visitor reception, schedule reminders and on-site issue handling at Fiera Milano Rho, Allianz MiCo, Fieramilanocity and nearby venues.", "users"],
     ["Chinese-English-Italian translation", "On-site interpretation, calls, product-material translation, email translation and post-meeting text in Chinese, English and Italian.", "messages"],
-    ["Transport coordination", "Airport, hotel, fairground, restaurants, client visits and nearby Milan-area routes.", "car"],
     ["Business consultancy and meeting support", "Prepare agendas, materials, minutes and action items for China-Italy trade, Italy-world trade, business visits and negotiations.", "briefcase"],
     ["Export-import and channel support", "Support export import, sourcing, agents, distributors, suppliers and trade-association conversations toward the next commercial step.", "settings"],
     ["Sales growth and marketing growth", "Support lead qualification, customer segmentation, fair follow-up and local market feedback for sales growth and marketing growth.", "users"],
@@ -431,7 +415,6 @@ const services = {
   it: [
     ["Accompagnamento business", "Registrazione, comunicazione allo stand, accoglienza clienti, promemoria agenda e gestione imprevisti a Fiera Milano Rho, Allianz MiCo, Fieramilanocity e sedi vicine.", "users"],
     ["Traduzione e interpretariato cinese-inglese-italiano", "Interpretariato sul posto, chiamate, traduzione materiali prodotto, email e testi post-riunione in cinese, inglese e italiano.", "messages"],
-    ["Coordinamento trasporti", "Aeroporto, hotel, fiera, ristoranti, visite clienti e itinerari nell'area di Milano.", "car"],
     ["Consulenza business e supporto riunioni", "Preparazione agenda, materiali, verbali e azioni per commercio Cina-Italia, Italia-mondo, visite business e negoziazioni.", "briefcase"],
     ["Export-import e sviluppo canali", "Supporto a export import, sourcing, agenti, distributori, fornitori e associazioni di categoria verso il passo commerciale successivo.", "settings"],
     ["Crescita vendite e marketing", "Supporto a lead qualification, segmentazione clienti, follow-up fiera e feedback di mercato locale per crescita vendite e marketing.", "users"],
@@ -488,18 +471,15 @@ const coverageLists = {
 const cases = {
   zh: [
     ["展位接待与商务口译", "示例：在展会现场协助参展方接待客户、介绍产品、记录关键需求并跟进沟通。", ["展位", "口译", "客户接待"], [imageUrls.expo, imageUrls.aiBooth]],
-    ["商务会谈与资料翻译", "示例：会前整理产品资料和议题，会中进行中英意沟通辅助，会后形成纪要和邮件草稿。", ["会议", "资料", "后续"], [imageUrls.meeting, imageUrls.aiMeeting]],
-    ["交通需求协调", "示例：根据航班、酒店、展馆和商务拜访安排交通需求，衔接多日多点行程。", ["机场", "酒店", "路线"], [imageUrls.milanStreet, imageUrls.aiTransport]]
+    ["商务会谈与资料翻译", "示例：会前整理产品资料和议题，会中进行中英意沟通辅助，会后形成纪要和邮件草稿。", ["会议", "资料", "后续"], [imageUrls.meeting, imageUrls.aiMeeting]]
   ],
   en: [
     ["Booth reception and business interpretation", "Example: support exhibitor-side reception, product introduction, key requirement notes and follow-up communication.", ["Booth", "Interpretation", "Reception"], [imageUrls.expo, imageUrls.aiBooth]],
-    ["Business meetings and material translation", "Example: prepare product materials and agenda, support trilingual communication, then draft minutes and follow-up emails.", ["Meeting", "Materials", "Follow-up"], [imageUrls.meeting, imageUrls.aiMeeting]],
-    ["Transport coordination", "Example: coordinate transport needs across flights, hotels, fairgrounds and business visits for multi-day routes.", ["Airport", "Hotel", "Routes"], [imageUrls.milanStreet, imageUrls.aiTransport]]
+    ["Business meetings and material translation", "Example: prepare product materials and agenda, support trilingual communication, then draft minutes and follow-up emails.", ["Meeting", "Materials", "Follow-up"], [imageUrls.meeting, imageUrls.aiMeeting]]
   ],
   it: [
     ["Accoglienza stand e interpretariato business", "Esempio: supporto ad accoglienza, presentazione prodotto, note sui bisogni chiave e follow-up.", ["Stand", "Interpretariato", "Accoglienza"], [imageUrls.expo, imageUrls.aiBooth]],
-    ["Riunioni business e traduzione materiali", "Esempio: preparazione materiali e agenda, supporto trilingue, verbali e bozze email successive.", ["Riunioni", "Materiali", "Follow-up"], [imageUrls.meeting, imageUrls.aiMeeting]],
-    ["Coordinamento trasporti", "Esempio: coordinare esigenze di trasporto tra voli, hotel, fiera e visite business multi-giorno.", ["Aeroporto", "Hotel", "Percorsi"], [imageUrls.milanStreet, imageUrls.aiTransport]]
+    ["Riunioni business e traduzione materiali", "Esempio: preparazione materiali e agenda, supporto trilingue, verbali e bozze email successive.", ["Riunioni", "Materiali", "Follow-up"], [imageUrls.meeting, imageUrls.aiMeeting]]
   ]
 };
 
@@ -611,7 +591,6 @@ const formOptions = {
     ],
     documentUnit: [["pages", "页数"], ["words", "字数"]],
     languagePair: [["中文 - 英文", "中文 - 英文"], ["中文 - 意大利语", "中文 - 意大利语"], ["中文 - 英文 - 意大利语", "中文 - 英文 - 意大利语"], ["英文 - 意大利语", "英文 - 意大利语"]],
-    transfer: [["无需用车", "无需用车"], ["机场接送单程", "机场接送单程"], ["机场接送往返", "机场接送往返"], ["展会日酒店及场馆接送单程", "展会日酒店及场馆接送单程"], ["展会日酒店及场馆接送往返", "展会日酒店及场馆接送往返"], ["__other", "其他"]],
     deliverables: [["无需后续工作", "无需后续工作"], ["会议纪要", "会议纪要"], ["会议纪要 + 待办事项", "会议纪要 + 待办事项"], ["产品资料翻译", "产品资料翻译"], ["后续邮件草稿", "后续邮件草稿"], ["客户信息表整理", "客户信息表整理"]],
     contactMethod: [["Email", "Email"], ["WeChat", "微信"], ["WhatsApp", "WhatsApp"], ["Telegram", "Telegram"], ["Signal", "Signal"]]
   },
@@ -629,7 +608,6 @@ const formOptions = {
     ],
     documentUnit: [["pages", "Pages"], ["words", "Words"]],
     languagePair: [["Chinese - English", "Chinese - English"], ["Chinese - Italian", "Chinese - Italian"], ["Chinese - English - Italian", "Chinese - English - Italian"], ["English - Italian", "English - Italian"]],
-    transfer: [["No car needed", "No car needed"], ["Airport transfer one way", "Airport transfer one way"], ["Airport transfer round trip", "Airport transfer round trip"], ["Fair-day hotel and venue transfer one way", "Fair-day hotel and venue transfer one way"], ["Fair-day hotel and venue transfer round trip", "Fair-day hotel and venue transfer round trip"], ["__other", "Other"]],
     deliverables: [["No follow-up work", "No follow-up work"], ["Meeting notes", "Meeting notes"], ["Minutes + action items", "Minutes + action items"], ["Product material translation", "Product material translation"], ["Follow-up email draft", "Follow-up email draft"], ["Client sheet organization", "Client sheet organization"]],
     contactMethod: [["Email", "Email"], ["WeChat", "WeChat"], ["WhatsApp", "WhatsApp"], ["Telegram", "Telegram"], ["Signal", "Signal"]]
   },
@@ -647,41 +625,40 @@ const formOptions = {
     ],
     documentUnit: [["pages", "Pagine"], ["words", "Parole"]],
     languagePair: [["Cinese - Inglese", "Cinese - Inglese"], ["Cinese - Italiano", "Cinese - Italiano"], ["Cinese - Inglese - Italiano", "Cinese - Inglese - Italiano"], ["Inglese - Italiano", "Inglese - Italiano"]],
-    transfer: [["Nessuna auto", "Nessuna auto"], ["Transfer aeroporto solo andata", "Transfer aeroporto solo andata"], ["Transfer aeroporto andata e ritorno", "Transfer aeroporto andata e ritorno"], ["Transfer fiera hotel-sede solo andata", "Transfer fiera hotel-sede solo andata"], ["Transfer fiera hotel-sede andata e ritorno", "Transfer fiera hotel-sede andata e ritorno"], ["__other", "Altro"]],
     deliverables: [["Nessun follow-up", "Nessun follow-up"], ["Note riunione", "Note riunione"], ["Verbale + azioni", "Verbale + azioni"], ["Traduzione materiali prodotto", "Traduzione materiali prodotto"], ["Bozza email follow-up", "Bozza email follow-up"], ["Scheda clienti", "Scheda clienti"]],
     contactMethod: [["Email", "Email"], ["WeChat", "WeChat"], ["WhatsApp", "WhatsApp"], ["Telegram", "Telegram"], ["Signal", "Signal"]]
   }
 };
 
 const serviceOptions = {
-  zh: [["accompaniment", "展会商务陪同"], ["interpretation", "中英意翻译/口译"], ["transport", "交通需求协调"], ["meeting", "商务会议支持"], ["consultancy", "商务咨询 / 中国意大利贸易"], ["exportImport", "出口进口与渠道对接"], ["salesMarketing", "销售增长 / 市场拓展"], ["followup", "会议/展会后续工作"], ["other", "其他服务"]],
-  en: [["accompaniment", "Business accompaniment"], ["interpretation", "Trilingual translation/interpretation"], ["transport", "Transport coordination"], ["meeting", "Meeting support"], ["consultancy", "Business consultancy / China-Italy trade"], ["exportImport", "Export-import and channel support"], ["salesMarketing", "Sales growth / marketing growth"], ["followup", "Meeting/fair follow-up"], ["other", "Other services"]],
-  it: [["accompaniment", "Accompagnamento business"], ["interpretation", "Traduzione/interpretariato trilingue"], ["transport", "Coordinamento trasporti"], ["meeting", "Supporto riunioni"], ["consultancy", "Consulenza business / commercio Cina-Italia"], ["exportImport", "Export-import e sviluppo canali"], ["salesMarketing", "Crescita vendite / marketing"], ["followup", "Follow-up riunione/fiera"], ["other", "Altri servizi"]]
+  zh: [["accompaniment", "展会商务陪同"], ["interpretation", "中英意翻译/口译"], ["meeting", "商务会议支持"], ["consultancy", "商务咨询 / 中国意大利贸易"], ["exportImport", "出口进口与渠道对接"], ["salesMarketing", "销售增长 / 市场拓展"], ["followup", "会议/展会后续工作"], ["other", "其他服务"]],
+  en: [["accompaniment", "Business accompaniment"], ["interpretation", "Trilingual translation/interpretation"], ["meeting", "Meeting support"], ["consultancy", "Business consultancy / China-Italy trade"], ["exportImport", "Export-import and channel support"], ["salesMarketing", "Sales growth / marketing growth"], ["followup", "Meeting/fair follow-up"], ["other", "Other services"]],
+  it: [["accompaniment", "Accompagnamento business"], ["interpretation", "Traduzione/interpretariato trilingue"], ["meeting", "Supporto riunioni"], ["consultancy", "Consulenza business / commercio Cina-Italia"], ["exportImport", "Export-import e sviluppo canali"], ["salesMarketing", "Crescita vendite / marketing"], ["followup", "Follow-up riunione/fiera"], ["other", "Altri servizi"]]
 };
 
 const agreementItems = {
   zh: [
     ["档期与定金", "建议至少提前三周沟通，并在双方确认报价和服务范围后预付定金锁定档期。提交询价不等于预订，正式安排以邮件或其他书面确认内容为准。"],
     ["取消与变更", "如客户取消已确认服务，定金不退还。经双方确认后，可将相应服务变更为基于客户已提供资料的英语或意大利语翻译，并交付相关文档。"],
-    ["服务性质", "服务为商务陪同、普通口译、资料翻译、行程和沟通支持，不构成法律、税务、财务、投资、移民或产品合规建议。"],
-    ["第三方服务", "如涉及车辆、司机、酒店、餐厅、票务、展会服务商或其他第三方服务，将按实际情况协助沟通或协调；不对第三方服务质量、延误、取消、损失或赔付承担责任。"],
-    ["客户责任", "客户负责展会门票、证件、交通、住宿、餐饮、样品、产品资料、产品合规、保险、签证及其商务活动所需费用与合法性。服务方不对客户的产品、资料和商务活动承担服务内容之外的其他责任。"],
+    ["服务性质", "服务为商务陪同、普通口译、资料翻译和现场沟通支持，不构成法律、税务、财务、投资、移民或产品合规建议。"],
+    ["第三方服务", "如涉及酒店、餐厅、票务、展会服务商或其他第三方服务，将按实际情况协助沟通；不对第三方服务质量、延误、取消、损失或赔付承担责任。"],
+    ["客户责任", "客户负责展会门票、证件、住宿、餐饮、样品、产品资料、产品合规、保险、签证及其商务活动所需费用与合法性。服务方不对客户的产品、资料和商务活动承担服务内容之外的其他责任。"],
     ["责任限制", "在法律允许范围内，服务责任上限不超过客户已经支付的对应服务费用；不对间接损失、商业机会损失、第三方行为、不可抗力或客户资料错误导致的损失承担责任。"]
   ],
   en: [
     ["Schedule and deposit", "A three-week lead time is recommended. After quote and scope confirmation, a deposit is recommended to reserve the schedule. Submitting an inquiry is not a booking; formal arrangements require written confirmation, usually by email."],
     ["Cancellation and changes", "If the client cancels a confirmed service, the deposit is non-refundable. Upon mutual confirmation, the service may be converted into English or Italian translation based on materials already provided by the client, with related documents delivered."],
-    ["Nature of service", "The service covers business accompaniment, non-certified interpretation, material translation, itinerary and communication support. It is not legal, tax, financial, investment, immigration or product-compliance advice."],
-    ["Third-party services", "Where vehicles, drivers, hotels, restaurants, ticketing, fair service providers or other third parties are involved, assistance may be provided for communication or coordination. No responsibility is accepted for third-party quality, delays, cancellations, losses or compensation."],
-    ["Client responsibilities", "The client is responsible for fair tickets, badges, transport, accommodation, meals, samples, product materials, product compliance, insurance, visas and the costs and legality of its business activities. The service provider is not responsible for the client's products, materials or business activities beyond the agreed service scope."],
+    ["Nature of service", "The service covers business accompaniment, non-certified interpretation, material translation and on-site communication support. It is not legal, tax, financial, investment, immigration or product-compliance advice."],
+    ["Third-party services", "Where hotels, restaurants, ticketing, fair service providers or other third parties are involved, assistance may be provided for communication. No responsibility is accepted for third-party quality, delays, cancellations, losses or compensation."],
+    ["Client responsibilities", "The client is responsible for fair tickets, badges, accommodation, meals, samples, product materials, product compliance, insurance, visas and the costs and legality of its business activities. The service provider is not responsible for the client's products, materials or business activities beyond the agreed service scope."],
     ["Limitation of liability", "To the extent permitted by law, service liability is capped at the corresponding service fee already paid by the client. No liability is accepted for indirect losses, lost business opportunities, third-party actions, force majeure or losses caused by inaccurate client materials."]
   ],
   it: [
     ["Date e deposito", "Si consiglia di comunicare almeno tre settimane prima. Dopo conferma di preventivo e ambito, è consigliato un deposito per bloccare le date. La richiesta non è prenotazione; gli accordi formali richiedono conferma scritta, normalmente via email."],
     ["Cancellazione e modifiche", "Se il cliente cancella un servizio confermato, il deposito non è rimborsabile. Con conferma reciproca, il servizio può essere convertito in traduzione inglese o italiana dei materiali già forniti dal cliente, con consegna dei relativi documenti."],
-    ["Natura del servizio", "Il servizio comprende accompagnamento business, interpretariato non certificato, traduzione materiali, itinerario e supporto comunicativo. Non costituisce consulenza legale, fiscale, finanziaria, di investimento, immigrazione o conformità prodotto."],
-    ["Servizi di terzi", "Se sono coinvolti veicoli, autisti, hotel, ristoranti, biglietti, fornitori fieristici o altri terzi, può essere offerto supporto di comunicazione o coordinamento. Non si assume responsabilità per qualità, ritardi, cancellazioni, perdite o indennizzi dei terzi."],
-    ["Responsabilità del cliente", "Il cliente è responsabile per biglietti, badge, trasporti, alloggio, pasti, campioni, materiali prodotto, conformità prodotto, assicurazione, visti, costi e legalità delle proprie attività business. Il prestatore non risponde di prodotti, materiali o attività del cliente oltre l'ambito concordato."],
+    ["Natura del servizio", "Il servizio comprende accompagnamento business, interpretariato non certificato, traduzione materiali e supporto comunicativo sul posto. Non costituisce consulenza legale, fiscale, finanziaria, di investimento, immigrazione o conformità prodotto."],
+    ["Servizi di terzi", "Se sono coinvolti hotel, ristoranti, biglietti, fornitori fieristici o altri terzi, può essere offerto supporto di comunicazione. Non si assume responsabilità per qualità, ritardi, cancellazioni, perdite o indennizzi dei terzi."],
+    ["Responsabilità del cliente", "Il cliente è responsabile per biglietti, badge, alloggio, pasti, campioni, materiali prodotto, conformità prodotto, assicurazione, visti, costi e legalità delle proprie attività business. Il prestatore non risponde di prodotti, materiali o attività del cliente oltre l'ambito concordato."],
     ["Limitazione responsabilità", "Nei limiti di legge, la responsabilità del servizio non supera il compenso già pagato dal cliente per il servizio corrispondente. Non si risponde per perdite indirette, opportunità commerciali perse, azioni di terzi, forza maggiore o errori nei materiali del cliente."]
   ]
 };
@@ -831,7 +808,7 @@ function getEventDetailZh(event) {
   if (specific) return { category: specific[0], intro: specific[1] };
   return {
     category: event.category,
-    intro: `${event.title} 是 2026 年米兰主要展会之一，适合根据参展目标安排展馆拜访、商务沟通、资料准备和交通衔接。`
+    intro: `${event.title} 是 2026 年米兰主要展会之一，适合根据参展目标安排展馆拜访、商务沟通、资料准备和后续跟进。`
   };
 }
 
@@ -950,10 +927,8 @@ function renderFormOptions() {
 
 function updateConditionalFields() {
   const exhibition = document.querySelector('[data-field="exhibition"]').value;
-  const transfer = document.querySelector('[data-field="transfer"]').value;
   const otherServiceChecked = !!document.querySelector('[name="services"][value="other"]:checked');
   document.querySelector("[data-other-exhibition-wrap]").hidden = exhibition !== "__other";
-  document.querySelector("[data-other-transfer-wrap]").hidden = transfer !== "__other";
   document.querySelector("[data-other-service-wrap]").hidden = !otherServiceChecked;
 }
 
@@ -993,9 +968,8 @@ function updateQuoteSummary() {
   const hours = Number(document.querySelector('[data-field="hours"]').value || 8);
   const people = Number(document.querySelector('[data-field="exhibitorPeople"]').value || 1);
   const docs = Number(document.querySelector('[data-field="documentAmount"]').value || 0);
-  const carPeople = Number(document.querySelector('[data-field="carPeople"]').value || 0);
   const selectedServices = form ? selectedServiceLabels(form).length : 0;
-  const score = days * 1.1 + Math.max(0, hours - 6) * .35 + Math.max(0, people - 2) * .45 + selectedServices * .8 + Math.min(docs / 20, 4) + Math.max(0, carPeople - 3) * .35;
+  const score = days * 1.1 + Math.max(0, hours - 6) * .35 + Math.max(0, people - 2) * .45 + selectedServices * .8 + Math.min(docs / 20, 4);
   const levelIndex = score > 14 ? 3 : score > 9 ? 2 : score > 5 ? 1 : 0;
   document.querySelector("[data-quote-level]").textContent = t.levels[levelIndex];
   document.querySelector("[data-quote-summary]").textContent = t.summaryTemplate
@@ -1016,7 +990,6 @@ function buildEmailBody() {
   const labels = translations[currentLang].form;
   const selectedServices = selectedServiceLabels(form);
   const exhibition = data.get("exhibition") === "__other" ? data.get("otherExhibition") : selectedOptionLabel("exhibition");
-  const transfer = data.get("transfer") === "__other" ? data.get("otherTransfer") : selectedOptionLabel("transfer");
   const lines = [
     t.intro,
     "",
@@ -1033,9 +1006,6 @@ function buildEmailBody() {
     line(translations[currentLang].form.sections.scope, selectedServices.join(", ")),
     line(labels.otherService, data.get("otherService")),
     line(labels.languagePair, selectedOptionLabel("languagePair")),
-    line(labels.transfer, transfer),
-    line(labels.carPeople, data.get("carPeople")),
-    line(labels.luggage, data.get("luggage")),
     line(labels.itineraryNote, data.get("itineraryNote")),
     line(labels.deliverables, selectedOptionLabel("deliverables")),
     "",
